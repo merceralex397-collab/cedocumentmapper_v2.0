@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://collisionengineers.local/contracts/expected-fixture.schema.json",
+  "title": "Expected Regression Fixture",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["fixture_id", "source_file", "expected_provider", "expected_values"],
+  "properties": {
+    "fixture_id": { "type": "string" },
+    "source_file": { "type": "string" },
+    "expected_provider": { "type": "string" },
+    "expected_values": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "allowed_blank_fields": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "notes": { "type": "string" }
+  }
+}
+

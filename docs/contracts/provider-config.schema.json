@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://collisionengineers.local/contracts/provider-config.schema.json",
+  "title": "Provider Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "providers"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 2 },
+    "providers": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/provider" }
+    }
+  },
+  "$defs": {
+    "provider": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["id", "name", "work_provider", "detect", "field_rules"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "work_provider": { "type": "string" },
+        "enabled": { "type": "boolean", "default": true },
+        "priority": { "type": "integer", "default": 0 },
+        "engineer_report": { "type": "boolean", "default": false },
+        "detect": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["required_phrases"],
+          "properties": {
+            "required_phrases": { "type": "array", "items": { "type": "string" } },
+            "optional_phrases": { "type": "array", "items": { "type": "string" }, "default": [] },
+            "negative_phrases": { "type": "array", "items": { "type": "string" }, "default": [] },
+            "minimum_confidence": { "type": "number", "minimum": 0, "maximum": 1, "default": 0.75 }
+          }
+        },
+        "field_rules": {
+          "type": "object",
+          "additionalProperties": { "$ref": "extraction-rule.schema.json" }
+        }
+      }
+    }
+  }
+}
+

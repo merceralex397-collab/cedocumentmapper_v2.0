@@ -1,0 +1,11 @@
+PyMuPDF>=1.24.0
+pypdf[image]>=5.0.0
+Pillow>=10.0.0
+python-docx>=1.1.0
+extract-msg>=0.45.0
+pytesseract>=0.3.10
+tkinterdnd2>=0.4.2
+pydantic>=2.7.0
+jsonschema>=4.22.0
+pywin32>=306; platform_system=="Windows"
+

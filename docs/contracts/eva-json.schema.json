@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://collisionengineers.local/contracts/eva-json.schema.json",
+  "title": "EVA JSON Export",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "Work Provider",
+    "VRM",
+    "Vehicle Model",
+    "Claimant Name",
+    "Reference",
+    "Incident Date",
+    "Instruction Date",
+    "Inspection Date",
+    "Inspection Address",
+    "Accident Circumstances",
+    "VAT Status",
+    "Mileage",
+    "Mileage Unit"
+  ],
+  "properties": {
+    "Work Provider": { "type": "string", "minLength": 1 },
+    "VRM": { "type": "string", "minLength": 1 },
+    "Vehicle Model": { "type": "string" },
+    "Claimant Name": { "type": "string" },
+    "Reference": { "type": "string" },
+    "Incident Date": { "type": "string", "pattern": "^$|^\\d{2}/\\d{2}/\\d{4}$" },
+    "Instruction Date": { "type": "string", "pattern": "^$|^\\d{2}/\\d{2}/\\d{4}$" },
+    "Inspection Date": { "type": "string", "pattern": "^$|^\\d{2}/\\d{2}/\\d{4}$" },
+    "Inspection Address": { "type": "string", "pattern": "^[^\\n]*(\\n[^\\n]*){5}$" },
+    "Accident Circumstances": { "type": "string" },
+    "VAT Status": { "type": "string", "enum": ["", "Yes", "No"] },
+    "Mileage": { "type": "string", "pattern": "^$|^\\d+$" },
+    "Mileage Unit": { "type": "string", "enum": ["", "Miles", "Km"] }
+  }
+}
+
