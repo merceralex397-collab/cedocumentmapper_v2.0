@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { 
-  FileText, Upload, Download, AlertCircle, CheckCircle2, Eye, Cpu
+  FileText, Upload, Download, AlertCircle, CheckCircle2, Eye, Info, Trash2
 } from "lucide-react";
+import logoImg from "./assets/logo.png";
 
 // Types matching Python Domain Models
 interface SourceSpan {
@@ -194,6 +195,7 @@ export default function App() {
   const [dragActive, setDragActive] = useState<boolean>(false);
   const dragCounter = useRef<number>(0);
   const [statusMessage, setStatusMessage] = useState<{ text: string; type: "info" | "success" | "error"; folder?: string } | null>(null);
+  const [expandedConfidence, setExpandedConfidence] = useState<Record<string, boolean>>({});
   
   // Custom Select Dropdown State
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
@@ -201,6 +203,133 @@ export default function App() {
 
   // Line elements mapping to scroll into view
   const lineRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  const getConfidenceExplanation = (_key: string, fieldVal: FieldExtraction) => {
+    const confPercent = Math.round((fieldVal.confidence ?? 1) * 100);
+    const ruleId = fieldVal.rule_id || "";
+    
+    if (confPercent >= 100) {
+      return "This field was extracted with 100% confidence using an exact matching rule defined in the active provider preset.";
+    }
+    
+    let explanation = `Confidence is at ${confPercent}% because `;
+    
+    if (ruleId.startsWith("fallback_")) {
+      explanation += "no specific rule was defined in the provider preset for this field. The system fell back to a heuristic extraction method ";
+      if (ruleId.includes("pattern")) {
+        explanation += "using a generic regular expression search.";
+      } else if (ruleId.includes("label")) {
+        explanation += "by searching for nearby labels using fuzzy matching.";
+      } else if (ruleId.includes("next_line")) {
+        explanation += "by looking at the line immediately following a detected label.";
+      } else if (ruleId.includes("subject")) {
+        explanation += "by looking for reference patterns in the subject line.";
+      } else {
+        explanation += "to extract the value from the document text.";
+      }
+    } else if (fieldVal.confidence && fieldVal.confidence < 1.0) {
+      explanation += `the provider-specific rule '${ruleId}' was matched via fuzzy similarity rather than an exact match.`;
+    } else {
+      explanation += "the extraction was based on heuristic rules and may require review.";
+    }
+    
+    if (fieldVal.issues && fieldVal.issues.length > 0) {
+      explanation += " Additionally, some validation rules failed: " + fieldVal.issues.map(iss => iss.message).join(" ");
+    }
+    
+    return explanation;
+  };
+
+  const handleClearWorkspace = () => {
+    setDocument(null);
+    setRecord(null);
+    setPdfUrl(null);
+    setSelectedField("work_provider");
+    setOverrideFields(new Set());
+    setExpandedConfidence({});
+  };
+
+  const handleCreateNewProviderFromTemp = async () => {
+    if (!activeProvider) return;
+    const name = activeProvider.name.trim();
+    const wp = activeProvider.work_provider.trim();
+    if (!name || name === "New Provider (Auto-Detected)" || !wp || wp === "UNKNOWN") {
+      showStatus("Please enter a valid Provider Name and Work Provider Code first.", "error");
+      return;
+    }
+    
+    const newId = name.toLowerCase().replace(/[^a-z0-9]/g, "_");
+    
+    const field_rules: Record<string, any> = {};
+    FIELD_KEYS.forEach(key => {
+      if (key === "work_provider") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "manual", value: wp };
+      } else if (key === "vrm") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "label_same_line", labels: ["Reg:", "Vehicle Reg:", "Registration:"] };
+      } else if (key === "vehicle_model") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "label_same_line", labels: ["Vehicle:", "Model:", "Make/Model:"] };
+      } else if (key === "claimant_name") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "label_same_line", labels: ["Client:", "Name:", "Claimant:"] };
+      } else if (key === "reference") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "label_same_line", labels: ["Ref:", "Our Ref:", "Reference:"] };
+      } else if (key === "incident_date") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "label_same_line", labels: ["Accident Date:", "Incident Date:", "Date of Accident:"] };
+      } else if (key === "instruction_date") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "label_same_line", labels: ["Instruction Date:", "Date:"] };
+      } else if (key === "inspection_date") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "manual", value: "" };
+      } else if (key === "inspection_address") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "label_same_line", labels: ["Address:", "Location:"] };
+      } else if (key === "accident_circumstances") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "between_labels", start_label: "Accident Circumstances:", end_label: "Vehicle:" };
+      } else if (key === "vat_status") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "presence", tokens: ["VAT Registered: yes", "VAT: Yes"] };
+      } else if (key === "mileage") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "label_same_line", labels: ["Mileage:", "Odometer:"] };
+      } else if (key === "mileage_unit") {
+        field_rules[key] = { id: `${newId}_${key}`, kind: "presence", tokens: ["miles", "km"] };
+      }
+    });
+
+    const newProvider: ProviderConfig = {
+      id: newId,
+      name,
+      work_provider: wp,
+      enabled: true,
+      priority: 10,
+      detect: {
+        required_phrases: activeProvider.detect.required_phrases.length > 0 
+          ? activeProvider.detect.required_phrases 
+          : [name],
+        optional_phrases: [],
+        negative_phrases: [],
+        minimum_confidence: 0.75
+      },
+      field_rules
+    };
+
+    const updatedProviders = [...providers.filter(p => p.id !== "unknown_temp" && p.id !== newId), newProvider];
+    setProviders(updatedProviders);
+    setInitialProviders([...initialProviders.filter(p => p.id !== newId), newProvider]);
+    setActiveProvider(newProvider);
+    
+    if (window.pywebview) {
+      try {
+        const success = await window.pywebview.api.save_providers(updatedProviders);
+        if (success) {
+          showStatus("Provider preset created and saved successfully!", "success");
+          if (document) {
+            const newRecord = await window.pywebview.api.extract_document_with_provider(document, newProvider);
+            setRecord(newRecord);
+          }
+        } else {
+          showStatus("Failed to save provider to disk.", "error");
+        }
+      } catch (err) {
+        showStatus("Error saving provider: " + err, "error");
+      }
+    }
+  };
 
   // Prevent default drag and drop behavior on window
   useEffect(() => {
@@ -361,6 +490,22 @@ export default function App() {
           const matched = providers.find(p => p.id === res.record.provider.provider_id);
           if (matched) {
             setActiveProvider(matched);
+          } else if (res.record.provider.provider_id === "unknown_temp") {
+            const tempProvider: ProviderConfig = {
+              id: "unknown_temp",
+              name: "New Provider (Auto-Detected)",
+              work_provider: "UNKNOWN",
+              enabled: true,
+              priority: 999,
+              detect: {
+                required_phrases: [],
+                optional_phrases: [],
+                negative_phrases: [],
+                minimum_confidence: 0.0
+              },
+              field_rules: {}
+            };
+            setActiveProvider(tempProvider);
           }
           showStatus("Document parsed successfully!", "success");
         }
@@ -725,8 +870,8 @@ export default function App() {
       {/* Top Header & Preset Bar */}
       <div className="panel top-bar">
         <div style={{ display: "flex", alignItems: "center", gap: "28px" }}>
-          <h1 style={{ background: "none", WebkitBackgroundClip: "initial", WebkitTextFillColor: "initial", color: "var(--text-primary)" }}>
-            <Cpu size={20} style={{ color: "var(--accent-teal)" }} />
+          <h1 style={{ display: "flex", alignItems: "center", gap: "10px", background: "none", WebkitBackgroundClip: "initial", WebkitTextFillColor: "initial", color: "var(--text-primary)" }}>
+            <img src={logoImg} alt="CE Logo" style={{ height: "24px", width: "auto" }} />
             CE Document Mapper v2.0
           </h1>
           
@@ -777,6 +922,11 @@ export default function App() {
           <button className="btn" onClick={() => handleSelectFile(false)}>
             <Upload size={14} /> Import Instruction
           </button>
+          {document && (
+            <button className="btn" onClick={handleClearWorkspace} style={{ borderColor: "rgba(239, 68, 68, 0.4)", color: "#fca5a5" }}>
+              <Trash2 size={14} /> Clear Workspace
+            </button>
+          )}
           <button className="btn" onClick={() => handleSelectFile(true)} disabled={!document}>
             <Eye size={14} /> Overlay Eng Report
           </button>
@@ -831,11 +981,44 @@ export default function App() {
                     {valText || "Not extracted"}
                   </div>
                   {fieldVal && (
-                    <div style={{ marginTop: "6px", fontSize: "10px", color: "var(--text-muted)", display: "flex", gap: "8px", flexWrap: "wrap" }}>
-                      {typeof fieldVal.confidence === "number" && <span>{Math.round(fieldVal.confidence * 100)}% confidence</span>}
-                      {fieldVal.rule_id && <span>{fieldVal.rule_id}</span>}
-                      {fieldVal.source_span && <span>p{(fieldVal.source_span.page_index ?? 0) + 1}:l{(fieldVal.source_span.line_index ?? 0) + 1}</span>}
-                      {fieldVal.issues.length > 0 && <span>{fieldVal.issues.length} issue{fieldVal.issues.length === 1 ? "" : "s"}</span>}
+                    <div style={{ marginTop: "6px", fontSize: "10px", color: "var(--text-muted)", display: "flex", flexDirection: "column", gap: "4px" }}>
+                      <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", alignItems: "center" }}>
+                        {typeof fieldVal.confidence === "number" && (
+                          <span style={fieldVal.confidence < 1.0 ? { color: "var(--warning)", display: "inline-flex", alignItems: "center", gap: "4px" } : {}}>
+                            {Math.round(fieldVal.confidence * 100)}% confidence
+                            {fieldVal.confidence < 1.0 && (
+                              <button 
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setExpandedConfidence(prev => ({ ...prev, [key]: !prev[key] }));
+                                }}
+                                style={{ background: "none", border: "none", cursor: "pointer", color: "var(--warning)", padding: 0, display: "inline-flex", alignItems: "center" }}
+                              >
+                                <Info size={12} />
+                              </button>
+                            )}
+                          </span>
+                        )}
+                        {fieldVal.rule_id && <span>{fieldVal.rule_id}</span>}
+                        {fieldVal.source_span && <span>p{(fieldVal.source_span.page_index ?? 0) + 1}:l{(fieldVal.source_span.line_index ?? 0) + 1}</span>}
+                        {fieldVal.issues.length > 0 && <span>{fieldVal.issues.length} issue{fieldVal.issues.length === 1 ? "" : "s"}</span>}
+                      </div>
+                      {expandedConfidence[key] && (
+                        <div 
+                          onClick={(e) => e.stopPropagation()}
+                          style={{
+                            marginTop: "4px",
+                            padding: "6px 8px",
+                            backgroundColor: "rgba(245, 158, 11, 0.08)",
+                            border: "1px solid rgba(245, 158, 11, 0.2)",
+                            borderRadius: "4px",
+                            color: "#f59e0b",
+                            lineHeight: "1.3"
+                          }}
+                        >
+                          {getConfidenceExplanation(key, fieldVal)}
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
@@ -885,7 +1068,11 @@ export default function App() {
                   style={{ height: "26px", padding: "0 10px", fontSize: "11px", borderRadius: "4px", border: "none", boxShadow: "none" }}
                   onClick={() => setViewMode("pdf")}
                 >
-                  Natively Rendered PDF
+                  {document?.source_type === "pdf" 
+                    ? "Natively Rendered PDF" 
+                    : (document?.source_type === "eml" || document?.source_type === "msg") 
+                      ? "Natively Rendered Email" 
+                      : "Natively Rendered Document"}
                 </button>
               </div>
             )}
@@ -897,7 +1084,11 @@ export default function App() {
                 <iframe 
                   src={pdfUrl} 
                   style={{ width: "100%", height: "100%", border: "none", borderRadius: "0 0 12px 12px" }}
-                  title="Natively Rendered PDF Viewer"
+                  title={document?.source_type === "pdf" 
+                    ? "Natively Rendered PDF Viewer" 
+                    : (document?.source_type === "eml" || document?.source_type === "msg") 
+                      ? "Natively Rendered Email Viewer" 
+                      : "Natively Rendered Document Viewer"}
                 />
               ) : (
                 document.pages.map(page => (
@@ -961,6 +1152,24 @@ export default function App() {
               Extraction Rules
             </div>
           </div>
+
+          {activeProvider?.id === "unknown_temp" && (
+            <div style={{
+              margin: "12px 16px 4px 16px",
+              padding: "10px 12px",
+              backgroundColor: "rgba(239, 68, 68, 0.08)",
+              border: "1px solid rgba(239, 68, 68, 0.25)",
+              borderRadius: "6px",
+              color: "#f87171",
+              fontSize: "12px",
+              lineHeight: "1.4"
+            }}>
+              <div style={{ fontWeight: "bold", display: "flex", alignItems: "center", gap: "6px", marginBottom: "4px" }}>
+                <AlertCircle size={14} /> New Provider Detected
+              </div>
+              Review these auto-extracted fields and save them as a new provider preset under Provider Settings.
+            </div>
+          )}
 
           {activeTab === "details" && (
             <div style={{ padding: "16px", overflowY: "auto", flexGrow: 1 }}>
@@ -1052,25 +1261,37 @@ export default function App() {
                 <label htmlFor="chk-postcode" style={{ cursor: "pointer", fontSize: "12px" }}>Force Postcode for Inspection Address</label>
               </div>
 
-              <div style={{ display: "flex", gap: "10px", marginTop: "16px" }}>
-                <button className="btn" style={{ flexGrow: 1, fontSize: "12px", padding: "6px" }} onClick={handleAddNewProvider}>
-                  Add Preset
+              {activeProvider?.id === "unknown_temp" ? (
+                <button 
+                  className="btn btn-primary" 
+                  style={{ marginTop: "24px", alignSelf: "stretch", justifyContent: "center", backgroundColor: "var(--accent-teal)", borderColor: "var(--accent-teal)" }}
+                  onClick={handleCreateNewProviderFromTemp}
+                >
+                  Create and Save Preset
                 </button>
-                <button className="btn" style={{ flexGrow: 1, fontSize: "12px", padding: "6px" }} onClick={handleResetProvider} disabled={!isProviderModified(activeProvider)}>
-                  Reset Preset
-                </button>
-                <button className="btn" style={{ flexGrow: 1, fontSize: "12px", padding: "6px", color: "var(--error)" }} onClick={handleDeleteProvider} disabled={providers.length <= 1}>
-                  Delete Preset
-                </button>
-              </div>
+              ) : (
+                <>
+                  <div style={{ display: "flex", gap: "10px", marginTop: "16px" }}>
+                    <button className="btn" style={{ flexGrow: 1, fontSize: "12px", padding: "6px" }} onClick={handleAddNewProvider}>
+                      Add Preset
+                    </button>
+                    <button className="btn" style={{ flexGrow: 1, fontSize: "12px", padding: "6px" }} onClick={handleResetProvider} disabled={!isProviderModified(activeProvider)}>
+                      Reset Preset
+                    </button>
+                    <button className="btn" style={{ flexGrow: 1, fontSize: "12px", padding: "6px", color: "var(--error)" }} onClick={handleDeleteProvider} disabled={providers.length <= 1}>
+                      Delete Preset
+                    </button>
+                  </div>
 
-              <button 
-                className="btn btn-primary" 
-                style={{ marginTop: "24px", alignSelf: "stretch", justifyContent: "center" }}
-                onClick={handleSaveProviders}
-              >
-                Save All Presets to Disk
-              </button>
+                  <button 
+                    className="btn btn-primary" 
+                    style={{ marginTop: "24px", alignSelf: "stretch", justifyContent: "center" }}
+                    onClick={handleSaveProviders}
+                  >
+                    Save All Presets to Disk
+                  </button>
+                </>
+              )}
             </div>
           )}
 
@@ -1106,7 +1327,7 @@ export default function App() {
                           display: "flex",
                           justifyContent: "space-between",
                           alignItems: "center",
-                          background: isExpanded ? "rgba(13, 148, 136, 0.05)" : "transparent"
+                          background: isExpanded ? "rgba(225, 29, 72, 0.05)" : "transparent"
                         }}
                       >
                         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -1337,14 +1558,26 @@ export default function App() {
                 })}
               </div>
 
-              {/* Config Save btn */}
-              <button 
-                className="btn btn-primary" 
-                style={{ marginTop: "16px", alignSelf: "stretch", justifyContent: "center" }}
-                onClick={handleSaveProviders}
-              >
-                Save All Presets
-              </button>
+              {/* Config Save and Reset buttons */}
+              {activeProvider?.id !== "unknown_temp" && (
+                <div style={{ display: "flex", gap: "10px", marginTop: "16px" }}>
+                  <button 
+                    className="btn"
+                    style={{ flexGrow: 1, fontSize: "12px", padding: "6px", justifyContent: "center" }}
+                    onClick={handleResetProvider}
+                    disabled={!isProviderModified(activeProvider)}
+                  >
+                    Reset Preset
+                  </button>
+                  <button 
+                    className="btn btn-primary" 
+                    style={{ flexGrow: 2, justifyContent: "center" }}
+                    onClick={handleSaveProviders}
+                  >
+                    Save All Presets
+                  </button>
+                </div>
+              )}
             </div>
           )}
         </div>

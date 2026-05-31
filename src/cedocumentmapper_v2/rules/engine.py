@@ -29,6 +29,7 @@ from cedocumentmapper_v2.normalization import (
 
 def clean_val(value: str) -> str:
     """Clean a value matching v1 clean_value."""
+    value = value.replace("\xa0", " ").replace("\u00a0", " ")
     value = value.replace("\r", " ").replace("\t", " ")
     value = re.sub(r"[ ]{2,}", " ", value)
     value = re.sub(r"\n{3,}", "\n\n", value)
@@ -49,6 +50,7 @@ def fuzzy_find_label(lines: list[DocumentLine], label: str, threshold: float = 0
             return idx, line, 1.0
 
     # 2. Fuzzy match using SequenceMatcher
+    effective_threshold = max(threshold, 0.85) if len(target) < 15 else threshold
     best_ratio = 0.0
     best_match = None
     for idx, line in enumerate(lines):
@@ -70,7 +72,7 @@ def fuzzy_find_label(lines: list[DocumentLine], label: str, threshold: float = 0
                 best_ratio = ratio
                 best_match = (idx, line)
 
-    if best_ratio >= threshold and best_match is not None:
+    if best_ratio >= effective_threshold and best_match is not None:
         return best_match[0], best_match[1], best_ratio
 
     return None
@@ -118,7 +120,22 @@ class RuleEngine:
             if not ext.value:
                 fallback = self._fallback_field(document, field_key)
                 if fallback.value:
-                    ext = fallback
+                    fallback_norm = fallback.value
+                    if field_key == FieldKey.VRM:
+                        fallback_norm = normalize_vrm(fallback_norm)
+                    elif field_key == FieldKey.MILEAGE:
+                        fallback_norm = normalize_mileage(fallback_norm)
+                    elif field_key in {FieldKey.INCIDENT_DATE, FieldKey.INSTRUCTION_DATE, FieldKey.INSPECTION_DATE}:
+                        fallback_norm = normalize_date(fallback_norm)
+                    elif field_key == FieldKey.VAT_STATUS:
+                        fallback_norm = normalize_vat_status(fallback_norm)
+                    elif field_key == FieldKey.MILEAGE_UNIT:
+                        fallback_norm = normalize_mileage_unit(fallback_norm)
+                    elif field_key == FieldKey.INSPECTION_ADDRESS:
+                        fallback_norm = normalize_address(fallback_norm, force_postcode=force_postcode)
+                    
+                    if not self._is_suspicious_value(field_key, fallback_norm, document):
+                        ext = fallback
             
             # Normalise the value
             norm_val = ext.value
@@ -608,9 +625,28 @@ class RuleEngine:
     def _is_suspicious_value(self, field_key: FieldKey, value: str, document: DocumentModel) -> bool:
         cleaned = clean_val(value)
         lower = cleaned.lower()
+        if field_key not in {FieldKey.ACCIDENT_CIRCUMSTANCES, FieldKey.INSPECTION_ADDRESS}:
+            salutations = {
+                "yours faithfully",
+                "yours sincerely",
+                "dear sirs",
+                "dear sir",
+                "dear mr",
+                "dear ms",
+                "dear miss",
+                "dear mrs",
+                "solicitors limited",
+                "baker & coleman",
+            }
+            if any(s in lower for s in salutations):
+                return True
         if field_key in {FieldKey.INCIDENT_DATE, FieldKey.INSTRUCTION_DATE, FieldKey.INSPECTION_DATE}:
             return bool(cleaned) and not re.fullmatch(r"\d{2}/\d{2}/\d{4}", cleaned)
         if field_key == FieldKey.CLAIMANT_NAME:
+            if len(cleaned) > 40:
+                return True
+            if any(w in f" {lower} " for w in (" was ", " has ", " had ", " been ", " when ", " hit ", " that ", " this ", " inspect ", " report ", " parked ", " vehicle ", " accident ", " witness ", " seen ", " collision ")):
+                return True
             return (
                 self._is_label_only_value(cleaned)
                 or bool(re.fullmatch(r"[A-Z]{1,3}\d{1,3}\s?[A-Z]{3}", cleaned, re.IGNORECASE))
@@ -620,6 +656,9 @@ class RuleEngine:
                 )
             )
         if field_key == FieldKey.VEHICLE_MODEL:
+            if len(cleaned) > 40:
+                if any(w in lower for w in ("grateful", "arrange", "inspect", "forward", "report", "locate", "address", "accident", "loss", "collision")):
+                    return True
             vrm_match = self._fallback_vrm_from_labels([line for page in document.pages for line in page.lines])
             vrm = normalize_vrm(vrm_match.value) if vrm_match.value else ""
             return (
@@ -655,6 +694,10 @@ class RuleEngine:
             postcode_context = re.search(rf"\b{re.escape(cleaned)}\s*\d[A-Z]{{2}}\b", document.plain_text, re.IGNORECASE)
             return bool(postcode_context)
         if field_key == FieldKey.REFERENCE:
+            if len(cleaned) > 35:
+                return True
+            if any(w in f" {lower} " for w in (" once ", " available ", " choose ", " report ", " inspect ", " vehicle ", " accident ", " loss ", " lose ")):
+                return True
             return (
                 self._is_label_only_value(cleaned)
                 or bool(re.fullmatch(r"[A-Za-z!?]{1,10}", cleaned))

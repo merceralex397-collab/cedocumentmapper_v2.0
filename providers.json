@@ -74,12 +74,12 @@
           "config": "ALS"
         },
         "vrm": {
-          "method": "single_label_offset",
-          "config": "Third Party Vehicle || +2"
+          "method": "single_label",
+          "config": "Vehicle Reg:"
         },
         "vehicle_model": {
-          "method": "single_label_offset",
-          "config": "Third Party Vehicle || +6"
+          "method": "single_label",
+          "config": "Vehicle Model:"
         },
         "claimant_name": {
           "method": "single_label",
@@ -327,7 +327,7 @@
         },
         "vrm": {
           "method": "fixed_position_label",
-          "config": "36 || -"
+          "config": "26 || -"
         },
         "vehicle_model": {
           "method": "two_labels",

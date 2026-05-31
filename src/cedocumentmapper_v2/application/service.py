@@ -87,8 +87,21 @@ class DocumentMapperService:
             loaded = providers or self.load_providers()
             match = self.detect_provider(document, loaded)
             provider_cfg = next((p for p in loaded if p.get("id") == match.provider_id), None)
-            if provider_cfg is None and loaded:
-                provider_cfg = loaded[0]
+            if provider_cfg is None:
+                provider_cfg = {
+                    "id": "unknown_temp",
+                    "name": "New Provider (Auto-Detected)",
+                    "work_provider": "UNKNOWN",
+                    "enabled": True,
+                    "priority": 999,
+                    "detect": {
+                        "required_phrases": [],
+                        "optional_phrases": [],
+                        "negative_phrases": [],
+                        "minimum_confidence": 0.0
+                    },
+                    "field_rules": {}
+                }
         if provider_cfg is None:
             return ExtractedRecord(provider=ProviderMatch(None, "Unknown", 0.0), fields={})
         return self.rule_engine.extract_record(document, provider_cfg)

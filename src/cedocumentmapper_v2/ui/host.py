@@ -43,6 +43,214 @@ class WebviewBridge:
             traceback.print_exc()
             raise e
 
+    def _render_docx_to_html(self, doc_path: Path) -> str:
+        try:
+            from docx import Document
+            doc = Document(str(doc_path))
+            html_body = []
+            for child in doc.element.body:
+                if child.tag.endswith('p'):
+                    from docx.text.paragraph import Paragraph
+                    p = Paragraph(child, doc)
+                    text = p.text.strip()
+                    if text:
+                        if p.style.name.startswith("Heading"):
+                            level = p.style.name.replace("Heading", "").strip()
+                            level = level if level.isdigit() else "1"
+                            html_body.append(f"<h{level}>{text}</h{level}>")
+                        else:
+                            html_body.append(f"<p>{text}</p>")
+                elif child.tag.endswith('tbl'):
+                    from docx.table import Table
+                    t = Table(child, doc)
+                    tbl_html = ["<table>"]
+                    for row in t.rows:
+                        tbl_html.append("<tr>")
+                        for cell in row.cells:
+                            tbl_html.append(f"<td>{cell.text.strip()}</td>")
+                        tbl_html.append("</tr>")
+                    tbl_html.append("</table>")
+                    html_body.append("\n".join(tbl_html))
+            
+            html = f"""
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="utf-8">
+                <style>
+                    body {{
+                        font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                        background-color: #0b0f19;
+                        color: #e2e8f0;
+                        margin: 0;
+                        padding: 24px;
+                        line-height: 1.6;
+                    }}
+                    h1, h2, h3, h4, h5, h6 {{
+                        color: #f1f5f9;
+                        margin-top: 24px;
+                        margin-bottom: 12px;
+                        font-weight: 600;
+                    }}
+                    p {{
+                        margin-top: 0;
+                        margin-bottom: 16px;
+                    }}
+                    table {{
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-top: 16px;
+                        margin-bottom: 16px;
+                        background-color: #151e2e;
+                    }}
+                    th, td {{
+                        border: 1px solid #1f2937;
+                        padding: 10px 14px;
+                        text-align: left;
+                        font-size: 13px;
+                    }}
+                    tr:nth-child(even) {{
+                        background-color: #1e293b;
+                    }}
+                </style>
+            </head>
+            <body>
+                <div style="max-width: 800px; margin: 0 auto; background-color: #111827; padding: 32px; border-radius: 8px; border: 1px solid #1f2937; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                    {"".join(html_body)}
+                </div>
+            </body>
+            </html>
+            """
+            return html
+        except Exception as e:
+            return f"<html><body><h3>Error rendering document preview: {str(e)}</h3></body></html>"
+
+    def _render_email_to_html(self, doc_path: Path) -> str:
+        try:
+            from email import policy
+            from email.parser import BytesParser
+            import extract_msg
+            import html as html_lib
+            
+            headers = {}
+            body_html = ""
+            body_text = ""
+            
+            ext = doc_path.suffix.lower()
+            if ext == ".eml":
+                with open(doc_path, "rb") as fh:
+                    msg = BytesParser(policy=policy.default).parse(fh)
+                for h in ("Subject", "From", "To", "Cc", "Date"):
+                    headers[h] = msg.get(h, "")
+                
+                if msg.is_multipart():
+                    for part in msg.walk():
+                        disposition = str(part.get_content_disposition() or "").lower()
+                        if disposition == "attachment":
+                            continue
+                        ctype = part.get_content_type()
+                        try:
+                            payload = part.get_content()
+                        except Exception:
+                            payload = part.get_payload(decode=True)
+                            if isinstance(payload, bytes):
+                                payload = payload.decode(part.get_content_charset() or "utf-8", errors="ignore")
+                        if isinstance(payload, str):
+                            if ctype == "text/html":
+                                body_html = payload
+                                break
+                            elif ctype == "text/plain":
+                                body_text = payload
+                else:
+                    payload = msg.get_content()
+                    if isinstance(payload, str):
+                        if msg.get_content_type() == "text/html":
+                            body_html = payload
+                        else:
+                            body_text = payload
+                            
+            elif ext == ".msg":
+                msg = extract_msg.Message(str(doc_path))
+                try:
+                    headers["Subject"] = getattr(msg, "subject", "") or ""
+                    headers["From"] = getattr(msg, "sender", "") or ""
+                    headers["To"] = getattr(msg, "to", "") or ""
+                    headers["Cc"] = getattr(msg, "cc", "") or ""
+                    headers["Date"] = getattr(msg, "date", "") or ""
+                    
+                    html_bytes = getattr(msg, "htmlBody", None)
+                    if html_bytes:
+                        if isinstance(html_bytes, bytes):
+                            body_html = html_bytes.decode("utf-8", errors="ignore")
+                        else:
+                            body_html = str(html_bytes)
+                    
+                    if not body_html:
+                        body_text = getattr(msg, "body", "") or ""
+                finally:
+                    msg.close()
+                    
+            headers_html = []
+            for h, val in headers.items():
+                if val:
+                    val_esc = html_lib.escape(str(val))
+                    headers_html.append(f"<div style='margin-bottom: 6px;'><strong style='color: #94a3b8; font-size: 13px;'>{h}:</strong> <span style='font-size: 14px;'>{val_esc}</span></div>")
+                    
+            body_content = ""
+            if body_html:
+                body_content = body_html
+            else:
+                body_content = f"<pre style='white-space: pre-wrap; font-family: inherit; font-size: 14px; margin: 0;'>{html_lib.escape(body_text)}</pre>"
+                
+            html = f"""
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="utf-8">
+                <style>
+                    body {{
+                        font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                        background-color: #0b0f19;
+                        color: #e2e8f0;
+                        margin: 0;
+                        padding: 24px;
+                        line-height: 1.6;
+                    }}
+                    .email-container {{
+                        max-width: 800px;
+                        margin: 0 auto;
+                        background-color: #111827;
+                        border-radius: 8px;
+                        border: 1px solid #1f2937;
+                        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                        overflow: hidden;
+                    }}
+                    .email-headers {{
+                        background-color: #151e2e;
+                        padding: 20px;
+                        border-bottom: 1px solid #1f2937;
+                    }}
+                    .email-body {{
+                        padding: 24px;
+                    }}
+                </style>
+            </head>
+            <body>
+                <div class="email-container">
+                    <div class="email-headers">
+                        {"".join(headers_html)}
+                    </div>
+                    <div class="email-body">
+                        {body_content}
+                    </div>
+                </div>
+            </body>
+            </html>
+            """
+            return html
+        except Exception as e:
+            return f"<html><body><h3>Error rendering email preview: {str(e)}</h3></body></html>"
+
     def import_file(self, path: str, is_engineer_report: bool = False) -> dict[str, Any]:
         try:
             path_obj = Path(path)
@@ -66,7 +274,31 @@ class WebviewBridge:
                 if not is_engineer_report:
                     self.last_detected_provider_id = match.provider_id
 
-            pdf_path = path_obj.resolve().as_uri() if path_obj.suffix.lower() == ".pdf" else None
+            import base64
+            suffix = path_obj.suffix.lower()
+            pdf_path = None
+            if suffix == ".pdf":
+                pdf_path = path_obj.resolve().as_uri()
+            elif suffix == ".docx":
+                html = self._render_docx_to_html(path_obj)
+                html_b64 = base64.b64encode(html.encode("utf-8")).decode("utf-8")
+                pdf_path = f"data:text/html;base64,{html_b64}"
+            elif suffix == ".doc":
+                import tempfile
+                with tempfile.TemporaryDirectory() as tmpdir:
+                    converted = self.service._convert_doc_to_docx(path_obj, Path(tmpdir), [])
+                    if converted and converted.exists():
+                        html = self._render_docx_to_html(converted)
+                    else:
+                        import html as html_lib
+                        plain_text = doc_model.plain_text
+                        html = f"<html><body style='font-family:sans-serif; background-color:#0b0f19; color:#e2e8f0; padding:24px;'><div style='max-width:800px; margin:0 auto; background-color:#111827; padding:32px; border-radius:8px; border:1px solid #1f2937;'><pre style='white-space:pre-wrap;'>{html_lib.escape(plain_text)}</pre></div></body></html>"
+                html_b64 = base64.b64encode(html.encode("utf-8")).decode("utf-8")
+                pdf_path = f"data:text/html;base64,{html_b64}"
+            elif suffix in (".eml", ".msg"):
+                html = self._render_email_to_html(path_obj)
+                html_b64 = base64.b64encode(html.encode("utf-8")).decode("utf-8")
+                pdf_path = f"data:text/html;base64,{html_b64}"
 
             return {
                 "document": self.service.document_to_dict(doc_model),

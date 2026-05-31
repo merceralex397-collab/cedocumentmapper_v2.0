@@ -192,7 +192,20 @@ class DocDocumentReader(DocumentReader):
         return text
 
     def _read_via_binary_text_scrape(self, path: Path) -> str:
-        data = path.read_bytes()
+        # Try to parse via olefile to extract the WordDocument stream cleanly
+        data = None
+        try:
+            import olefile
+            if olefile.isOleFile(path):
+                ole = olefile.OleFileIO(path)
+                if ole.exists("WordDocument"):
+                    data = ole.openstream("WordDocument").read()
+        except Exception:
+            pass
+
+        if data is None:
+            data = path.read_bytes()
+
         rtf_index = data.find(b"{\\rtf")
         if 0 <= rtf_index < 4096:
             rtf_text = data[rtf_index:].decode("cp1252", errors="ignore")
@@ -207,10 +220,10 @@ class DocDocumentReader(DocumentReader):
 
         ascii_runs = [
             match.group(0).decode("cp1252", errors="ignore")
-            for match in re.finditer(rb"[\x09\x0a\x0d\x20-\x7e\xa0-\xff]{8,}", data)
+            for match in re.finditer(rb"[\x09\x0a\x0d\x20-\x7e\xa0-\xff]{4,}", data)
         ]
         utf16_text = data.decode("utf-16le", errors="ignore")
-        utf16_runs = re.findall(r"[\t\r\n -~£]{8,}", utf16_text)
+        utf16_runs = re.findall(r"[\t\r\n -~£]{4,}", utf16_text)
 
         lines: list[str] = []
         seen = set()
@@ -251,17 +264,26 @@ class DocDocumentReader(DocumentReader):
     def _looks_like_human_text(self, value: str) -> bool:
         if len(value) < 2 or len(value) > 220:
             return False
+        if "bjbj" in value.lower() or "\\" in value:
+            return False
+        if any(c in value for c in "?!%*"):
+            return False
+            
+        allowed_chars = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 \t.,:;/-_()&'@£#\"+=<>[]\u2018\u2019\u201c\u201d\u2013\u2014\u2011áéíóúÁÉÍÓÚàèìòùÀÈÌÒÙäëïöüÄËÏÖÜâêîôûÂÊÎÔÛñÑ")
+        if not all(c in allowed_chars for c in value):
+            return False
+
+        words = value.split()
+        if len(words) == 1:
+            w = words[0].lower()
+            if not any(v in w for v in "aeiouy") and not any(c.isdigit() for c in w):
+                return False
+
         letters = sum(ch.isalpha() for ch in value)
         digits = sum(ch.isdigit() for ch in value)
-        printable = sum(ch.isprintable() for ch in value)
-        if printable < len(value):
-            return False
         if letters + digits < 2:
             return False
-        if letters == 0 and digits < 4:
-            return False
-        suspicious = sum(1 for ch in value if not (ch.isalnum() or ch.isspace() or ch in ".,:;/-_()&'@£#"))
-        return suspicious <= max(3, len(value) // 8)
+        return True
 
     def _build_model_from_text(self, path: Path, text: str, notes: list[str]) -> DocumentModel:
         lines_list = []
