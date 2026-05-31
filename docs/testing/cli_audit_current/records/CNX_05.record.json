@@ -1,0 +1,189 @@
+{
+  "provider": {
+    "provider_id": "cnx_engineers",
+    "provider_name": "CNX (Engineers)",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "CNX (Engineers)",
+      "raw_value": "",
+      "rule_id": "cnx_engineers_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "HT25DAO",
+      "raw_value": "HT25DAO",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.88,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 19,
+        "bbox": [
+          50.87903594970703,
+          330.0666809082031,
+          128.58206176757812,
+          339.42669677734375
+        ]
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "CUPRA TERRAMAR V2 ETSI S-A",
+      "raw_value": "CUPRA TERRAMAR V2 ETSI S-A",
+      "rule_id": "fallback_vehicle_model_exact_vehicle",
+      "confidence": 0.78,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 15,
+        "bbox": [
+          52.559139251708984,
+          315.9067077636719,
+          225.52642822265625,
+          325.2666931152344
+        ]
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mr Harrison Carter",
+      "raw_value": "Mr Harrison Carter",
+      "rule_id": "fallback_claimant_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 12,
+        "bbox": [
+          36.95912551879883,
+          259.1880798339844,
+          165.74679565429688,
+          267.5948486328125
+        ]
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "00076626/GC",
+      "raw_value": "00076626/GC",
+      "rule_id": "fallback_reference_next_line",
+      "confidence": 0.76,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 4,
+        "bbox": [
+          412.5610656738281,
+          168.54652404785156,
+          468.644775390625,
+          177.42654418945312
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "20/01/2026",
+      "raw_value": "20/01/2026",
+      "rule_id": "fallback_incident_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 48,
+        "bbox": [
+          231.83926391601562,
+          469.02679443359375,
+          315.7301330566406,
+          478.38677978515625
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "26/01/2026",
+      "raw_value": "26 January 2026",
+      "rule_id": "cnx_engineers_instruction_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "cnx_engineers_inspection_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 1,
+        "bbox": [
+          382.79937744140625,
+          148.6265411376953,
+          403.7452697753906,
+          157.50656127929688
+        ]
+      },
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "s\nHarwoods Southampton Accident Repair Cen\nUnit 1\nWestwood Business Park\nBrunel Rd Totton Southampton SO40 3WX have compiled an estimate in the sum of £1\n428.00 plus parts at manufacturer's list",
+      "raw_value": "s, Harwoods Southampton Accident Repair Cen, Unit 1, Westwood Business Park, Brunel Rd, Totton,\nSouthampton, SO40 3WX, have compiled an estimate in the sum of £1,428.00 plus parts at manufacturer's list",
+      "rule_id": "fallback_inspection_address",
+      "confidence": 0.8,
+      "source_span": {
+        "page_index": 1,
+        "line_index": 14,
+        "bbox": [
+          36.95912551879883,
+          155.4098663330078,
+          545.9217529296875,
+          165.4898681640625
+        ]
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "cnx_engineers_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "2787",
+      "raw_value": "2787",
+      "rule_id": "cnx_engineers_mileage",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 17,
+        "bbox": [
+          444.47930908203125,
+          315.9067077636719,
+          503.41265869140625,
+          325.2666931152344
+        ]
+      },
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "Miles",
+      "raw_value": "Miles",
+      "rule_id": "cnx_engineers_mileage_unit",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

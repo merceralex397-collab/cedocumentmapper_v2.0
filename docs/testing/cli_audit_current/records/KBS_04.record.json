@@ -1,0 +1,180 @@
+{
+  "provider": {
+    "provider_id": "kbs",
+    "provider_name": "KBS",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "KBS",
+      "raw_value": "KBS",
+      "rule_id": "kbs_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "GL18EVC",
+      "raw_value": "GL18EVC",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.675,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 19,
+        "bbox": [
+          252.0500030517578,
+          369.6499938964844,
+          295.1050109863281,
+          380.69000244140625
+        ]
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Volkswagen",
+      "raw_value": "Volkswagen",
+      "rule_id": "fallback_vehicle_model_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 14,
+        "bbox": [
+          72.02400207519531,
+          356.2099914550781,
+          166.43504333496094,
+          367.25
+        ]
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mr Khayam Ahmed",
+      "raw_value": "Mr Khayam Ahmed",
+      "rule_id": "fallback_claimant_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 11,
+        "bbox": [
+          72.02400207519531,
+          342.7699890136719,
+          120.71504211425781,
+          353.80999755859375
+        ]
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "AA.303669",
+      "raw_value": "AA.303669",
+      "rule_id": "kbs_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 7,
+        "bbox": [
+          72.02400207519531,
+          235.33999633789062,
+          163.07504272460938,
+          246.37998962402344
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "01/05/2026",
+      "raw_value": "01/05/2026",
+      "rule_id": "fallback_incident_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 22,
+        "bbox": [
+          252.0500030517578,
+          383.0899963378906,
+          308.5450134277344,
+          394.1300048828125
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "06/05/2026",
+      "raw_value": "06 May 2026",
+      "rule_id": "kbs_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 8,
+        "bbox": [
+          72.02400207519531,
+          262.1299743652344,
+          132.5950469970703,
+          273.16998291015625
+        ]
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "kbs_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "(295 Uttoxeter Road Stoke-On-Trent ST3 5LQ)\n\n\n\n\n",
+      "raw_value": "(295 Uttoxeter Road Stoke-On-Trent ST3 5LQ)",
+      "rule_id": "kbs_inspection_address",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 35,
+        "bbox": [
+          72.02400207519531,
+          626.1399536132812,
+          437.08502197265625,
+          637.1799926757812
+        ]
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "The claimant was travelling on the A34 near the Michelin site in Trent Vale, Stoke-on-Trent. The\nvehicle in front slowed and came to a stop in order to turn right into the Michelin premises. The\nclaimant brought their vehicle to a stop behind it. A third-party vehicle travelling behind the claimant\nfailed to stop in time and collided with the rear of the claimant’s vehicle.",
+      "raw_value": "The claimant was travelling on the A34 near the Michelin site in Trent Vale, Stoke-on-Trent. The\nvehicle in front slowed and came to a stop in order to turn right into the Michelin premises. The\nclaimant brought their vehicle to a stop behind it. A third-party vehicle travelling behind the claimant\nfailed to stop in time and collided with the rear of the claimant’s vehicle.",
+      "rule_id": "kbs_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kbs_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kbs_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kbs_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

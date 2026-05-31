@@ -1,0 +1,141 @@
+{
+  "provider": {
+    "provider_id": "kerr",
+    "provider_name": "KERR",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "KERR",
+      "raw_value": "KERR",
+      "rule_id": "kerr_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "YF12JBO",
+      "raw_value": "YF12 JBO",
+      "rule_id": "kerr_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 18,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "BMW 3 Series 3.0 335d Sport Plus Edition Steptronic Euro 5 2dr 2012",
+      "raw_value": "BMW 3 Series 3.0 335d Sport Plus Edition Steptronic Euro 5 2dr 2012",
+      "rule_id": "kerr_vehicle_model",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 16,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Patrick Conaghan",
+      "raw_value": "Patrick Conaghan",
+      "rule_id": "kerr_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 10,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "AD/SR/VRL/1/5254",
+      "raw_value": "AD/SR/VRL/1/5254",
+      "rule_id": "kerr_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 0,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "21/03/2026",
+      "raw_value": "21 st March 2026",
+      "rule_id": "kerr_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 20,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "25/03/2026",
+      "raw_value": "25/03/2026",
+      "rule_id": "kerr_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 4,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "kerr_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "MYLES COACHWORKS\n15 Green Street\n\n\n\nKA8 8AD",
+      "raw_value": "MYLES COACHWORKS, 15 Green Street, KA8 8AD,",
+      "rule_id": "kerr_inspection_address",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

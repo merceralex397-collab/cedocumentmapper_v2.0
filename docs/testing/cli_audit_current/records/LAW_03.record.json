@@ -1,0 +1,141 @@
+{
+  "provider": {
+    "provider_id": "pch_lawshield",
+    "provider_name": "PCH (Lawshield)",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "PCH",
+      "raw_value": "PCH",
+      "rule_id": "pch_lawshield_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "LB21HVV",
+      "raw_value": "LB21HVV",
+      "rule_id": "pch_lawshield_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 18,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "BMW 218i m sport auto",
+      "raw_value": "BMW 218i m sport auto",
+      "rule_id": "pch_lawshield_vehicle_model",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 16,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mr Kadir Altunatmaz",
+      "raw_value": "Mr Kadir Altunatmaz",
+      "rule_id": "pch_lawshield_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 7,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "575465",
+      "raw_value": "575465",
+      "rule_id": "pch_lawshield_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 4,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "30/04/2026",
+      "raw_value": "30/04/2026",
+      "rule_id": "pch_lawshield_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 5,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "06/05/2026",
+      "raw_value": "6th May 2026",
+      "rule_id": "pch_lawshield_instruction_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "pch_lawshield_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "Image-based Assessment\n\n\n\n\n",
+      "raw_value": "Image-based Assessment",
+      "rule_id": "pch_lawshield_inspection_address",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "Our client has been stationary when the third party has hit us in the rear.",
+      "raw_value": "Our client has been stationary when the third party has hit us in the rear.",
+      "rule_id": "pch_lawshield_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 25,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "pch_lawshield_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "pch_lawshield_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

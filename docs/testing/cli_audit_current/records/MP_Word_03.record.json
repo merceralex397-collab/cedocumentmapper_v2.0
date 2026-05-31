@@ -1,0 +1,133 @@
+{
+  "provider": {
+    "provider_id": "mp_simple",
+    "provider_name": "MP (Simple)",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "MP",
+      "raw_value": "MP",
+      "rule_id": "mp_simple_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "MA22CHZ",
+      "raw_value": "MA22 CHZ",
+      "rule_id": "mp_simple_vrm",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Toyota Corolla (Private Hire)",
+      "raw_value": "Toyota Corolla (Private Hire)",
+      "rule_id": "mp_simple_vehicle_model",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "MONTREAL PRESTIGE LTD",
+      "raw_value": "MONTREAL PRESTIGE LTD",
+      "rule_id": "mp_simple_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 8,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "RA6458812",
+      "raw_value": "RA6458812",
+      "rule_id": "mp_simple_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 7,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "22/03/2026",
+      "raw_value": "22/03/2026",
+      "rule_id": "mp_simple_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 6,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "25/03/2026",
+      "raw_value": "25/03/2026",
+      "rule_id": "mp_simple_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 2,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_simple_inspection_date",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "Gertrude Road\nNorwich\n\n\n\nNR3 4RW",
+      "raw_value": "Gertrude Road\nNorwich\nNR3 4RW",
+      "rule_id": "mp_simple_inspection_address",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_simple_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_simple_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_simple_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

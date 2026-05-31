@@ -1,0 +1,145 @@
+{
+  "provider": {
+    "provider_id": "alison",
+    "provider_name": "ALISON",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "ALISON",
+      "raw_value": "ALISON",
+      "rule_id": "alison_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "BD69NJY",
+      "raw_value": "BD69NJY",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.88,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 18,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "BMW 220i luxury auto",
+      "raw_value": "BMW 220i luxury auto",
+      "rule_id": "fallback_vehicle_model_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 16,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Our clients vehicle has been parked unattended when your insured hit the vehicle. Witness seen the collision.",
+      "raw_value": "Our clients vehicle has been parked unattended when your insured hit the vehicle. Witness seen the collision.",
+      "rule_id": "fallback_claimant_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 25,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "_JMW/CB",
+      "raw_value": "_JMW/CB",
+      "rule_id": "alison_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 1546,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "04/03/2026",
+      "raw_value": "04/03/2026",
+      "rule_id": "alison_incident_date",
+      "confidence": 0.8571428571428571,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 5,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "06/05/2026",
+      "raw_value": "6th May 2026",
+      "rule_id": "fallback_instruction_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 1,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "alison_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "12 Aquarius Drive\n\n\n\n\n",
+      "raw_value": "12 Aquarius Drive",
+      "rule_id": "alison_inspection_address",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 9,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "alison_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "alison_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "Km",
+      "raw_value": "Km",
+      "rule_id": "fallback_mileage_unit",
+      "confidence": 0.6,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

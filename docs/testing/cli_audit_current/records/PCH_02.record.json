@@ -1,0 +1,145 @@
+{
+  "provider": {
+    "provider_id": "alison",
+    "provider_name": "ALISON",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "ALISON",
+      "raw_value": "ALISON",
+      "rule_id": "alison_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "XS02ANG",
+      "raw_value": "XS02ANG",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.88,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 17,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "MERCEDES-BENZ A 180 amg line premium+ m",
+      "raw_value": "MERCEDES-BENZ A 180 amg line premium+ m",
+      "rule_id": "fallback_vehicle_model_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 15,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Agreed Value: 0.00",
+      "raw_value": "Agreed Value: 0.00",
+      "rule_id": "fallback_claimant_name",
+      "confidence": 0.6476190476190475,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 25,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "_JMW/CB",
+      "raw_value": "_JMW/CB",
+      "rule_id": "alison_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 1545,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "20/03/2026",
+      "raw_value": "20/03/2026",
+      "rule_id": "alison_incident_date",
+      "confidence": 0.8571428571428571,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 5,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "06/05/2026",
+      "raw_value": "6th May 2026",
+      "rule_id": "fallback_instruction_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 1,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "alison_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "120 London Road\n\n\n\n\n",
+      "raw_value": "120 London Road",
+      "rule_id": "alison_inspection_address",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 9,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "alison_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "alison_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "Km",
+      "raw_value": "Km",
+      "rule_id": "fallback_mileage_unit",
+      "confidence": 0.6,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

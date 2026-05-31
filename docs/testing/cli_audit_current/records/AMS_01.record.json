@@ -1,0 +1,156 @@
+{
+  "provider": {
+    "provider_id": "ams",
+    "provider_name": "AMS",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "AMS",
+      "raw_value": "AMS",
+      "rule_id": "ams_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "AV59DXR",
+      "raw_value": "AV59DXR",
+      "rule_id": "ams_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 16,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "",
+      "raw_value": "Accident Date: 29/04/2026",
+      "rule_id": "fallback_vehicle_model",
+      "confidence": 0.612,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 16,
+        "bbox": null
+      },
+      "issues": [
+        {
+          "field": "vehicle_model",
+          "severity": "error",
+          "code": "missing_required_field",
+          "message": "Required field 'vehicle_model' is empty."
+        }
+      ]
+    },
+    "claimant_name": {
+      "value": "Mr Bilal Ali",
+      "raw_value": "Mr Bilal Ali",
+      "rule_id": "ams_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 11,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "100085.002/RSY/SQ",
+      "raw_value": "100085.002/RSY/SQ",
+      "rule_id": "fallback_reference_exact_label",
+      "confidence": 0.84,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 1,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "29/04/2026",
+      "raw_value": "29/04/2026",
+      "rule_id": "ams_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 17,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "29/04/2026",
+      "raw_value": "29th April 2026",
+      "rule_id": "fallback_instruction_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 2,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "ams_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "If the impact damage to our claimant's vehicle appears to have been caused by anything other than a straight in-line impact to the rear\nplease prepare and forward to us photographs of all the vehicle\ns damage to assist us in establishing liability.\nThese instructions are sent in accordance with our standard terms and conditions\ndetails of which have previously been signed and agreed by you. Please note should the repair costs be under £150.00 please contact the file handler quoting our full reference before preparing any engineers report. Please could you ensure that the report is email to the relevant Fee Earner at the email address provided above. Yours faithfully\nRaja Yousaf",
+      "raw_value": "If the impact damage to our claimant's vehicle appears to have been caused by anything other than a straight in-line impact to the rear, please prepare and forward to us photographs of all the vehicle\ns damage to assist us in establishing liability.\nThese instructions are sent in accordance with our standard terms and conditions, details of which have previously been signed and agreed by you.\nPlease note should the repair costs be under £150.00 please contact the file handler quoting our full reference before preparing any engineers report.\nPlease could you ensure that the report is email to the relevant Fee Earner at the email address provided above.\nYours faithfully\nRaja Yousaf",
+      "rule_id": "fallback_inspection_address",
+      "confidence": 0.6709677419354839,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 20,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "The Claimant's vehicle was hit in the rear by the Defendant vehicle.",
+      "raw_value": "The Claimant's vehicle was hit in the rear by the Defendant vehicle.",
+      "rule_id": "ams_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 18,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "ams_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "ams_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "Km",
+      "raw_value": "Km",
+      "rule_id": "fallback_mileage_unit",
+      "confidence": 0.6,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

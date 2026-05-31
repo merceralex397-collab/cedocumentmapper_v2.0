@@ -1,0 +1,180 @@
+{
+  "provider": {
+    "provider_id": "eva_engineers",
+    "provider_name": "EVA (Engineers)",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "EVA (Engineers)",
+      "raw_value": "",
+      "rule_id": "eva_engineers_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "NG22FVH",
+      "raw_value": "NG22FVH",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.88,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 21,
+        "bbox": [
+          59.5190544128418,
+          310.147705078125,
+          136.48931884765625,
+          319.5077209472656
+        ]
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "NISSAN JUKE TEKNA + DIG-T",
+      "raw_value": "NISSAN JUKE TEKNA + DIG-T",
+      "rule_id": "fallback_vehicle_model_exact_vehicle",
+      "confidence": 0.78,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 17,
+        "bbox": [
+          60.95914077758789,
+          295.98773193359375,
+          222.3824462890625,
+          305.34771728515625
+        ]
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Ms. Angela Feetham",
+      "raw_value": "Ms. Angela Feetham",
+      "rule_id": "fallback_claimant_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 14,
+        "bbox": [
+          45.359134674072266,
+          236.38912963867188,
+          150.0267791748047,
+          244.79588317871094
+        ]
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "00035775/MATTG",
+      "raw_value": "00035775/MATTG",
+      "rule_id": "fallback_reference_next_line",
+      "confidence": 0.76,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 3,
+        "bbox": [
+          420.9610595703125,
+          145.74757385253906,
+          495.06341552734375,
+          154.62759399414062
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "02/05/2026",
+      "raw_value": "02/05/2026",
+      "rule_id": "fallback_incident_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 50,
+        "bbox": [
+          240.23927307128906,
+          449.1078186035156,
+          324.3701477050781,
+          458.46783447265625
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "06/05/2026",
+      "raw_value": "06 May 2026",
+      "rule_id": "eva_engineers_instruction_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "06/05/2026",
+      "raw_value": "06/05/2026",
+      "rule_id": "eva_engineers_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "(25.71% of PAV)\nRoadworthy: Yes\nDESKTOP ASSESSMENT\nThis report has been compiled from a desktop review of the information available relating to this claim.\nNATURE OF INCIDENT The vehicle has suffered moderate collision/impact damage to the right hand rear door.\nENGINEER'S COMMENTS",
+      "raw_value": "(25.71% of PAV)\nRoadworthy: Yes\nDESKTOP ASSESSMENT\nThis report has been compiled from a desktop review of the information available relating to this claim.\nNATURE OF INCIDENT\nThe vehicle has suffered moderate collision/impact damage to the right hand rear door.\nENGINEER'S COMMENTS",
+      "rule_id": "fallback_inspection_address",
+      "confidence": 0.6857142857142857,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 56,
+        "bbox": [
+          227.75917053222656,
+          474.5478515625,
+          357.9817199707031,
+          483.9078674316406
+        ]
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "eva_engineers_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "20558",
+      "raw_value": "20558",
+      "rule_id": "eva_engineers_mileage",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 19,
+        "bbox": [
+          452.87933349609375,
+          295.9877014160156,
+          517.0912475585938,
+          305.34771728515625
+        ]
+      },
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "Miles",
+      "raw_value": "Miles",
+      "rule_id": "eva_engineers_mileage_unit",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

@@ -1,0 +1,169 @@
+{
+  "provider": {
+    "provider_id": "alison",
+    "provider_name": "ALISON",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "ALISON",
+      "raw_value": "ALISON",
+      "rule_id": "alison_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "BD65XRZ",
+      "raw_value": "BD65 XRZ",
+      "rule_id": "alison_vrm",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "",
+      "raw_value": "of our client’s vehicle as soon as possible and provide a report",
+      "rule_id": "fallback_vehicle_model_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 11,
+        "bbox": [
+          70.94400024414062,
+          286.3387451171875,
+          527.359619140625,
+          298.6483459472656
+        ]
+      },
+      "issues": [
+        {
+          "field": "vehicle_model",
+          "severity": "error",
+          "code": "missing_required_field",
+          "message": "Required field 'vehicle_model' is empty."
+        }
+      ]
+    },
+    "claimant_name": {
+      "value": "Mohammed Tausif",
+      "raw_value": "Mohammed Tausif",
+      "rule_id": "alison_claimant_name",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "reference": {
+      "value": "with your report once available. Once they are in receipt of your report they may choose to",
+      "raw_value": "with your report once available. Once they are in receipt of your report they may choose to",
+      "rule_id": "fallback_reference",
+      "confidence": 0.6263157894736842,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 19,
+        "bbox": [
+          70.94400024414062,
+          412.8387756347656,
+          527.2825317382812,
+          425.14837646484375
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "06/10/2025",
+      "raw_value": "06/10/2025",
+      "rule_id": "fallback_incident_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 8,
+        "bbox": [
+          178.94000244140625,
+          223.09877014160156,
+          237.11912536621094,
+          235.4083709716797
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "10/10/2025",
+      "raw_value": "10 October 2025",
+      "rule_id": "alison_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 0,
+        "bbox": [
+          70.94400024414062,
+          134.50880432128906,
+          155.9691162109375,
+          146.8184051513672
+        ]
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "alison_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "2 Lady Royd Gate\nBradford\n\n\n\nBD8 0FB",
+      "raw_value": "2 Lady Royd Gate, Bradford, BD8 0FB",
+      "rule_id": "fallback_inspection_address",
+      "confidence": 0.8,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 15,
+        "bbox": [
+          70.94400024414062,
+          362.17877197265625,
+          117.4491195678711,
+          374.4883728027344
+        ]
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "alison_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "alison_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "alison_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "alison_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

@@ -1,0 +1,153 @@
+{
+  "provider": {
+    "provider_id": "kmr",
+    "provider_name": "KMR",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "KMR",
+      "raw_value": "KMR",
+      "rule_id": "kmr_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "EX23LKD",
+      "raw_value": "EX23 LKD",
+      "rule_id": "kmr_vrm",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Skoda Superb",
+      "raw_value": "Skoda Superb",
+      "rule_id": "kmr_vehicle_model",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Streetrax Ltd – EX23 LKD",
+      "raw_value": "Streetrax Ltd – EX23 LKD",
+      "rule_id": "kmr_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 8,
+        "bbox": [
+          72.0,
+          352.82403564453125,
+          222.9500274658203,
+          365.00103759765625
+        ]
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "01066-Streetrax Ltd – EX23 LKD",
+      "raw_value": "01066-Streetrax Ltd – EX23 LKD",
+      "rule_id": "kmr_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 5,
+        "bbox": [
+          72.0,
+          276.9240417480469,
+          293.70001220703125,
+          289.1010437011719
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "21/04/2026",
+      "raw_value": "21/04/2026",
+      "rule_id": "kmr_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 9,
+        "bbox": [
+          72.0,
+          365.4740295410156,
+          170.02099609375,
+          377.6510314941406
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "21/04/2026",
+      "raw_value": "21/04/2026",
+      "rule_id": "fallback_instruction_date_top_date",
+      "confidence": 0.5,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 9,
+        "bbox": [
+          72.0,
+          365.4740295410156,
+          170.02099609375,
+          377.6510314941406
+        ]
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "kmr_inspection_date",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "16 Chorlton Street\nManchester\n\n\n\nM1 3HW",
+      "raw_value": "16 Chorlton Street, Manchester, M1 3HW",
+      "rule_id": "kmr_inspection_address",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kmr_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kmr_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kmr_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kmr_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

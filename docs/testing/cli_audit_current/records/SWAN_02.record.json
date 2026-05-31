@@ -1,0 +1,152 @@
+{
+  "provider": {
+    "provider_id": "swan",
+    "provider_name": "SWAN",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "SWAN",
+      "raw_value": "SWAN",
+      "rule_id": "swan_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "BH17PKC",
+      "raw_value": "                  BH17PKC",
+      "rule_id": "swan_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 9,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "",
+      "raw_value": "In the report, please advise whether the vehicle is beyond economic repair, or whether it is repairable.",
+      "rule_id": "fallback_vehicle_model",
+      "confidence": 0.6375,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 12,
+        "bbox": null
+      },
+      "issues": [
+        {
+          "field": "vehicle_model",
+          "severity": "error",
+          "code": "missing_required_field",
+          "message": "Required field 'vehicle_model' is empty."
+        }
+      ]
+    },
+    "claimant_name": {
+      "value": "                     Mr Shahid Yaseen",
+      "raw_value": "                     Mr Shahid Yaseen",
+      "rule_id": "swan_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 6,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "01214- Shahid.Yaseen",
+      "raw_value": "01214- Shahid.Yaseen",
+      "rule_id": "swan_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 0,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "26/03/2026",
+      "raw_value": "- 26/03/2026",
+      "rule_id": "swan_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 11,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "02/04/2026",
+      "raw_value": "02/04/2026",
+      "rule_id": "swan_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 1,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "swan_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "44 Rosslyn Crescent\nLuton\n\n\n\nLU3 2AU",
+      "raw_value": "             44 Rosslyn Crescent, Luton, Bedfordshire LU3 2AU",
+      "rule_id": "fallback_inspection_address",
+      "confidence": 0.8,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 7,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "swan_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "swan_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "swan_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "swan_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

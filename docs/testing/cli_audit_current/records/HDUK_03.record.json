@@ -1,0 +1,180 @@
+{
+  "provider": {
+    "provider_id": "hduk",
+    "provider_name": "HDUK",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "YML",
+      "raw_value": "YML",
+      "rule_id": "hduk_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "ML16NGJ",
+      "raw_value": "ML16 NGJ",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.675,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 21,
+        "bbox": [
+          252.0500030517578,
+          342.04998779296875,
+          300.3850402832031,
+          353.0899963378906
+        ]
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Land RoverRANGE ROVER SPORT SDV6 HSE",
+      "raw_value": "Land RoverRANGE ROVER SPORT SDV6 HSE",
+      "rule_id": "fallback_vehicle_model_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 16,
+        "bbox": [
+          72.02400207519531,
+          328.6099853515625,
+          166.43504333496094,
+          339.6499938964844
+        ]
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Lee Hornby",
+      "raw_value": "Lee Hornby",
+      "rule_id": "fallback_claimant_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 13,
+        "bbox": [
+          72.02400207519531,
+          315.1700134277344,
+          120.71504211425781,
+          326.21002197265625
+        ]
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "HD4008",
+      "raw_value": "HD4008",
+      "rule_id": "hduk_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 9,
+        "bbox": [
+          72.02400207519531,
+          207.73995971679688,
+          150.1150360107422,
+          218.7799530029297
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "05/05/2026",
+      "raw_value": "05 May 2026",
+      "rule_id": "fallback_incident_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 10,
+        "bbox": [
+          72.02400207519531,
+          234.61996459960938,
+          132.5950469970703,
+          245.6599578857422
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "05/05/2026",
+      "raw_value": "05 May 2026",
+      "rule_id": "hduk_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 10,
+        "bbox": [
+          72.02400207519531,
+          234.61996459960938,
+          132.5950469970703,
+          245.6599578857422
+        ]
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "hduk_inspection_date",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "126 Hatton Road\n\n\n\n\nCH1 5EF",
+      "raw_value": "126 Hatton Road, Chester CH1 5EF",
+      "rule_id": "hduk_inspection_address",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 31,
+        "bbox": [
+          72.02400207519531,
+          505.8700256347656,
+          384.5250244140625,
+          516.9100341796875
+        ]
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "'Client's vehicle was parked when\nthe defendant reversed and collided with the rear side of the claimant's vehicle ' As a result of the\ncollision we request that you inspect our Client's vehicle at the address mentioned below and forward\nto us the report in due course.",
+      "raw_value": "'Client's vehicle was parked when\nthe defendant reversed and collided with the rear side of the claimant's vehicle ' As a result of the\ncollision we request that you inspect our Client's vehicle at the address mentioned below and forward\nto us the report in due course.",
+      "rule_id": "hduk_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "hduk_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "hduk_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "hduk_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

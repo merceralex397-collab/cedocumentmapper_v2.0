@@ -1,0 +1,162 @@
+{
+  "provider": {
+    "provider_id": "sbl",
+    "provider_name": "SBL",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "SBL",
+      "raw_value": "SBL",
+      "rule_id": "sbl_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "AJ17FNL",
+      "raw_value": "AJ17 FNL",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.6545454545454545,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 35,
+        "bbox": [
+          150.0,
+          398.0022277832031,
+          185.54400634765625,
+          406.938232421875
+        ]
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Peugeot 308",
+      "raw_value": "Peugeot 308",
+      "rule_id": "fallback_vehicle_model_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 31,
+        "bbox": [
+          30.0,
+          370.0022277832031,
+          82.87200164794922,
+          378.938232421875
+        ]
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "has been stopped at some traffic lights with 2 vehicles in front. Lights have turned",
+      "raw_value": "has been stopped at some traffic lights with 2 vehicles in front. Lights have turned",
+      "rule_id": "fallback_claimant_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 42,
+        "bbox": [
+          150.0,
+          454.0022277832031,
+          460.592041015625,
+          462.938232421875
+        ]
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "Claim Number",
+      "raw_value": "Claim Number",
+      "rule_id": "fallback_reference",
+      "confidence": 0.68,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 13,
+        "bbox": [
+          30.0,
+          200.00328063964844,
+          149.89199829101562,
+          213.40728759765625
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "28/04/2026",
+      "raw_value": "28/04/2026",
+      "rule_id": "fallback_incident_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 8,
+        "bbox": [
+          150.0,
+          140.00218200683594,
+          190.0159912109375,
+          148.9381866455078
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "28/04/2026",
+      "raw_value": "28/04/2026",
+      "rule_id": "sbl_instruction_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "sbl_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "Image-based Assessment\n\n\n\n\n",
+      "raw_value": "Image-based Assessment",
+      "rule_id": "sbl_inspection_address",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "Client has been stopped at some traffic lights with 2 vehicles in front. Lights have turned\namber and then the client has been hit from behind by the other vehicle.",
+      "raw_value": "Client has been stopped at some traffic lights with 2 vehicles in front. Lights have turned\namber and then the client has been hit from behind by the other vehicle.",
+      "rule_id": "sbl_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "No",
+      "raw_value": "No",
+      "rule_id": "fallback_vat_negative",
+      "confidence": 0.65,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "sbl_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "sbl_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

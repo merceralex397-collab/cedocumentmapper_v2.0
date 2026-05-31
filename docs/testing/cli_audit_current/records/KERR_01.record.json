@@ -1,0 +1,145 @@
+{
+  "provider": {
+    "provider_id": "kerr",
+    "provider_name": "KERR",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "KERR",
+      "raw_value": "KERR",
+      "rule_id": "kerr_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "YD72KZX",
+      "raw_value": "YD72 KZX",
+      "rule_id": "kerr_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 19,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Skoda Octavia 1.4 TSI iV 13kWh SE Technology DSG Euro 6 (s/s) 5dr 2022 silver",
+      "raw_value": "Skoda Octavia 1.4 TSI iV 13kWh SE Technology DSG Euro 6 (s/s) 5dr 2022 silver",
+      "rule_id": "kerr_vehicle_model",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 17,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Samual Stephen",
+      "raw_value": "Samual Stephen",
+      "rule_id": "kerr_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 11,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "AD/VRL/1/5241",
+      "raw_value": "AD/VRL/1/5241",
+      "rule_id": "fallback_reference_subject",
+      "confidence": 0.78,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 0,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "28/02/2026",
+      "raw_value": "28/02/2026",
+      "rule_id": "kerr_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 21,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "10/03/2026",
+      "raw_value": "10/03/2026",
+      "rule_id": "kerr_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 4,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "kerr_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "19A Garrier Road\nSpringside\nIrvine\n\n\nKA11 3AT",
+      "raw_value": "19A Garrier Road, Springside, Irvine, KA11 3AT",
+      "rule_id": "fallback_inspection_address",
+      "confidence": 0.8,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 13,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

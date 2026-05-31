@@ -1,0 +1,145 @@
+{
+  "provider": {
+    "provider_id": "qcl",
+    "provider_name": "QCL",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "QCL",
+      "raw_value": "QCL",
+      "rule_id": "qcl_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "AY19LTW",
+      "raw_value": "AY19 LTW",
+      "rule_id": "qcl_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 4,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "BMW X3",
+      "raw_value": "BMW X3",
+      "rule_id": "qcl_vehicle_model",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 5,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mr Hamza Ahmad",
+      "raw_value": "Mr Hamza Ahmad",
+      "rule_id": "qcl_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 2,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "225880.TA",
+      "raw_value": "225880.TA",
+      "rule_id": "qcl_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 22,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "04/05/2026",
+      "raw_value": "04-May-2026",
+      "rule_id": "qcl_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 3,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "06/05/2026",
+      "raw_value": "06 May 2026",
+      "rule_id": "qcl_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 21,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "qcl_inspection_date",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "54 Street Austell Drive Heald Green Cheadle\n\n\n\n\nSK8 3EG",
+      "raw_value": "54 Street Austell Drive Heald Green Cheadle SK8 3EG",
+      "rule_id": "qcl_inspection_address",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 6,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "qcl_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "qcl_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "qcl_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "qcl_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

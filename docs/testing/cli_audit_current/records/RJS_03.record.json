@@ -1,0 +1,145 @@
+{
+  "provider": {
+    "provider_id": "rjs",
+    "provider_name": "RJS",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "RJS",
+      "raw_value": "RJS",
+      "rule_id": "rjs_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "SF16EFM",
+      "raw_value": "SF16EFM",
+      "rule_id": "rjs_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 18,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "HORIZON BLUE HDI S/S TEPEE ALLURE",
+      "raw_value": "HORIZON BLUE HDI S/S TEPEE ALLURE",
+      "rule_id": "rjs_vehicle_model",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 20,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mr Mohamad Rizaf Mohamad Ilyas",
+      "raw_value": "Mr Mohamad Rizaf Mohamad Ilyas",
+      "rule_id": "rjs_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 16,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "126170.001/LG/LG",
+      "raw_value": "126170.001/LG/LG",
+      "rule_id": "fallback_reference_exact_label",
+      "confidence": 0.84,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 9,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "29/04/2026",
+      "raw_value": "29th April 2026",
+      "rule_id": "rjs_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 17,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "30/04/2026",
+      "raw_value": "30th April 2026",
+      "rule_id": "rjs_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 13,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "rjs_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "14 St. Edmunds Close\nCrawley\n\n\n\nRH11 7SR",
+      "raw_value": "14 St. Edmunds Close\nCrawley\nRH11 7SR",
+      "rule_id": "rjs_inspection_address",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "The claimant was stationary in traffic when the defendant has failed to maintain proper braking distance and has negligently collided with the rear of the claimant's vehicle. .",
+      "raw_value": "The claimant was stationary in traffic when the defendant has failed to maintain proper braking distance and has negligently collided with the rear of the claimant's vehicle. .",
+      "rule_id": "rjs_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 22,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "rjs_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "rjs_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "rjs_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

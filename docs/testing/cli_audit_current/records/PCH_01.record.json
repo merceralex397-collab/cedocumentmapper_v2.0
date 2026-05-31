@@ -1,0 +1,141 @@
+{
+  "provider": {
+    "provider_id": "pch_performance",
+    "provider_name": "PCH (Performance)",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "PCH",
+      "raw_value": "PCH",
+      "rule_id": "pch_performance_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "VN20XFC",
+      "raw_value": "VN20XFC",
+      "rule_id": "pch_performance_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 17,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "VOLVO Xc90 r-design t8 phev awd",
+      "raw_value": "VOLVO Xc90 r-design t8 phev awd",
+      "rule_id": "pch_performance_vehicle_model",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 15,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mrs Adam Bielecka",
+      "raw_value": "Mrs Adam Bielecka",
+      "rule_id": "pch_performance_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 7,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "573942",
+      "raw_value": "573942",
+      "rule_id": "pch_performance_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 4,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "31/03/2026",
+      "raw_value": "31/03/2026",
+      "rule_id": "pch_performance_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 5,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "06/05/2026",
+      "raw_value": "6th May 2026",
+      "rule_id": "pch_performance_instruction_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "pch_performance_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "Image-based Assessment\n\n\n\n\n",
+      "raw_value": "Image-based Assessment",
+      "rule_id": "pch_performance_inspection_address",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "Front car of 3 car incident. Rear car is at fault ------ MIDDLE CAR LO08PXB 07846607721 -",
+      "raw_value": "Front car of 3 car incident. Rear car is at fault ------ MIDDLE CAR LO08PXB 07846607721 -",
+      "rule_id": "pch_performance_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 24,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "pch_performance_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "Km",
+      "raw_value": "Km",
+      "rule_id": "fallback_mileage_unit",
+      "confidence": 0.6,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

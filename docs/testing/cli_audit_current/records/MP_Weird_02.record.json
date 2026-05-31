@@ -1,0 +1,137 @@
+{
+  "provider": {
+    "provider_id": "mp_branded",
+    "provider_name": "MP (Branded)",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "MP",
+      "raw_value": "MP",
+      "rule_id": "mp_branded_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "JAV8R",
+      "raw_value": "JAV 8R",
+      "rule_id": "mp_branded_vrm",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Mercedes E Class",
+      "raw_value": "Mercedes E Class",
+      "rule_id": "mp_branded_vehicle_model",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mr Ali Nuuh",
+      "raw_value": "Mr Ali Nuuh",
+      "rule_id": "mp_branded_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 12,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "RA6458827",
+      "raw_value": "RA6458827",
+      "rule_id": "mp_branded_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 11,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "07/04/2026",
+      "raw_value": "07/04/2026",
+      "rule_id": "mp_branded_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 10,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "09/04/2026",
+      "raw_value": "09/042026",
+      "rule_id": "mp_branded_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 6,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "13/04/2026",
+      "raw_value": "13/04/2026",
+      "rule_id": "mp_branded_inspection_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 8,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "Horns Road\nIlford\n\n\n\nIG6",
+      "raw_value": "Horns Road\nIlford\nIG6",
+      "rule_id": "mp_branded_inspection_address",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_branded_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_branded_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_branded_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

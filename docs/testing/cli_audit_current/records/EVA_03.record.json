@@ -1,0 +1,180 @@
+{
+  "provider": {
+    "provider_id": "eva_engineers",
+    "provider_name": "EVA (Engineers)",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "EVA (Engineers)",
+      "raw_value": "",
+      "rule_id": "eva_engineers_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "YP66VJL",
+      "raw_value": "YP66VJL",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.88,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 21,
+        "bbox": [
+          50.87903594970703,
+          310.1466979980469,
+          125.18097686767578,
+          319.5066833496094
+        ]
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "HYUNDAI I30 SE NAV BLUE DRIVE CRDI",
+      "raw_value": "HYUNDAI I30 SE NAV BLUE DRIVE CRDI",
+      "rule_id": "fallback_vehicle_model_exact_vehicle",
+      "confidence": 0.78,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 17,
+        "bbox": [
+          52.559139251708984,
+          295.9867248535156,
+          257.5797119140625,
+          304.8667297363281
+        ]
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mr Tinotenda Gatsie",
+      "raw_value": "Mr Tinotenda Gatsie",
+      "rule_id": "fallback_claimant_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 14,
+        "bbox": [
+          36.95912551879883,
+          236.38809204101562,
+          141.7095947265625,
+          244.7948455810547
+        ]
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "00035765/HASSANA",
+      "raw_value": "00035765/HASSANA",
+      "rule_id": "fallback_reference_next_line",
+      "confidence": 0.76,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 3,
+        "bbox": [
+          412.5610656738281,
+          145.7465362548828,
+          498.1565856933594,
+          154.62655639648438
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "04/05/2026",
+      "raw_value": "04/05/2026",
+      "rule_id": "fallback_incident_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 50,
+        "bbox": [
+          231.83926391601562,
+          449.1067810058594,
+          315.7301330566406,
+          458.466796875
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "06/05/2026",
+      "raw_value": "06 May 2026",
+      "rule_id": "eva_engineers_instruction_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "06/05/2026",
+      "raw_value": "06/05/2026",
+      "rule_id": "eva_engineers_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "to wheel impact.\nIn preparing this report I confirm that I understand my overriding duty to the court and confirm I have complied with\nthat duty. I confirm that I have made clear which facts and matters referred to in this report are within my own\nknowledge and which are not. Those that are within my own knowledge I confirm to be true. The opinions I have\nexpressed represent my true and complete professional opinions on the matters to which they refer. This report relates to damage sustained by the above vehicle in an RTC. QDOS Assistance commissioned this report\nin writing on behalf of the client.",
+      "raw_value": "to wheel impact.\nIn preparing this report I confirm that I understand my overriding duty to the court and confirm I have complied with\nthat duty. I confirm that I have made clear which facts and matters referred to in this report are within my own\nknowledge and which are not. Those that are within my own knowledge I confirm to be true. The opinions I have\nexpressed represent my true and complete professional opinions on the matters to which they refer.\nThis report relates to damage sustained by the above vehicle in an RTC. QDOS Assistance commissioned this report\nin writing on behalf of the client.",
+      "rule_id": "fallback_inspection_address",
+      "confidence": 0.6709677419354839,
+      "source_span": {
+        "page_index": 1,
+        "line_index": 37,
+        "bbox": [
+          36.95912551879883,
+          499.5701599121094,
+          551.4417724609375,
+          509.650146484375
+        ]
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "eva_engineers_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "46892",
+      "raw_value": "46892",
+      "rule_id": "eva_engineers_mileage",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 19,
+        "bbox": [
+          444.47930908203125,
+          295.9867248535156,
+          508.4513244628906,
+          305.3467102050781
+        ]
+      },
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "Miles",
+      "raw_value": "Miles",
+      "rule_id": "eva_engineers_mileage_unit",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

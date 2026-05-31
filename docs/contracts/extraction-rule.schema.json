@@ -15,6 +15,7 @@
         "between_labels",
         "fixed_line",
         "fixed_line_label",
+        "label_same_or_next_line",
         "line_offset",
         "regex",
         "presence",
@@ -26,10 +27,13 @@
     "start_label": { "type": "string" },
     "end_label": { "type": "string" },
     "line_number": { "type": "integer", "minimum": 1 },
+    "line_start": { "type": "integer", "minimum": 1 },
+    "line_end": { "type": "integer", "minimum": 1 },
     "offset": { "type": "integer" },
     "pattern": { "type": "string" },
     "tokens": { "type": "array", "items": { "type": "string" } },
     "value": { "type": "string" },
+    "absent_value": { "type": "string" },
     "max_lines": { "type": "integer", "minimum": 1, "default": 1 },
     "normalizer": { "type": "string" }
   }

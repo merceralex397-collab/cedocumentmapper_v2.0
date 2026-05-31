@@ -1,0 +1,141 @@
+{
+  "provider": {
+    "provider_id": "kerr",
+    "provider_name": "KERR",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "KERR",
+      "raw_value": "KERR",
+      "rule_id": "kerr_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "SE66LJK",
+      "raw_value": "SE66LJK",
+      "rule_id": "kerr_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 19,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Ford Mondeo 2.0 TDCi ST-Line Euro 6 (s/s) 5dr 2017 Grey",
+      "raw_value": "Ford Mondeo 2.0 TDCi ST-Line Euro 6 (s/s) 5dr 2017 Grey",
+      "rule_id": "kerr_vehicle_model",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 17,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Steven Maguire",
+      "raw_value": "Steven Maguire",
+      "rule_id": "kerr_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 11,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "SR/VRL/1/5257",
+      "raw_value": "SR/VRL/1/5257",
+      "rule_id": "kerr_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 0,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "21/03/2026",
+      "raw_value": "21 st March 2026",
+      "rule_id": "kerr_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 21,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "27/03/2026",
+      "raw_value": "27/03/2026",
+      "rule_id": "kerr_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 4,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "kerr_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "MYLES COACHWORKS\n15 Green Street\n\n\n\nKA8 8AD",
+      "raw_value": "MYLES COACHWORKS, 15 Green Street, KA8 8AD,",
+      "rule_id": "kerr_inspection_address",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kerr_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

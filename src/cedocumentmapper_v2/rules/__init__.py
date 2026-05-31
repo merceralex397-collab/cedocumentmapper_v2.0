@@ -1,2 +1,3 @@
-"""Rule engine module."""
+from .engine import RuleEngine
 
+__all__ = ["RuleEngine"]

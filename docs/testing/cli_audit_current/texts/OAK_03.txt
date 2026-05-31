@@ -1,0 +1,200 @@
+Arial; Symbol; Cambria Math;
+Tahoma; Times New Roman ;
+Times New Roman ; Cambria;
+Times New Roman ; Times New Roman ;
+Times New Roman ; Calibri;
+Times New Roman ; Times New Roman CE ;
+Times New Roman Cyr ; Times New Roman Greek ; Times New Roman Tur ;
+Times New Roman (Hebrew) ; Times New Roman (Arabic) ;
+Times New Roman Baltic ; Times New Roman (Vietnamese) ; Arial CE;
+Arial Cyr; Arial Greek; Arial Tur; Arial (Hebrew);
+Arial (Arabic); Arial Baltic; Arial (Vietnamese); Cambria Math CE;
+Cambria Math Cyr; Cambria Math Greek; Cambria Math Tur; Cambria Math Baltic;
+Cambria Math (Vietnamese); Tahoma CE; Tahoma Cyr; Tahoma Greek;
+Tahoma Tur; Tahoma (Hebrew); Tahoma (Arabic); Tahoma Baltic;
+Tahoma (Vietnamese); Tahoma (Thai); Times New Roman CE ;
+Times New Roman Cyr ; Times New Roman Greek ;
+Times New Roman Tur ; Times New Roman (Hebrew) ;
+Times New Roman (Arabic) ; Times New Roman Baltic ;
+Times New Roman (Vietnamese) ; Times New Roman CE ;
+Times New Roman (Vietnamese) ; Cambria CE; Cambria Cyr;
+Cambria Greek; Cambria Tur; Cambria Baltic;
+Cambria (Vietnamese); Times New Roman CE ;
+Times New Roman (Vietnamese) ; Calibri CE; Calibri Cyr;
+Calibri Greek; Calibri Tur; Calibri (Hebrew);
+Calibri (Arabic); Calibri Baltic; Calibri (Vietnamese);
+Times New Roman CE ; Times New Roman Cyr ;
+Times New Roman Greek ; Times New Roman Tur ;
+Times New Roman Baltic ; Times New Roman (Vietnamese) ;
+Proclaim;
+header;
+footer;
+Proclaim Sign Off 1;
+Proclaim Sign Off 2;
+Proclaim Sign Off 3;
+Proclaim Sign Off 4;
+Proclaim Sign Off 5;
+Proclaim Client Sign Off 1;
+Proclaim Client Sign Off 2;
+Proclaim Client Sign Off 3;
+Proclaim Client Sign Off 4;
+Proclaim Client Sign Off 5;
+Proclaim Claims Client Sign Off 1;
+Proclaim Claims Client Sign Off 2;
+Proclaim Claims Client Sign Off 3;
+Proclaim Claims Client Sign Off 4;
+Proclaim Claims Client Sign Off 5;
+Proclaim Claims Sign Off 1;
+Proclaim Claims Sign Off 2;
+Proclaim Claims Sign Off 3;
+Proclaim Claims Sign Off 4;
+Proclaim Claims Sign Off 5;
+Proclaim Patient Sign Off 1;
+Proclaim Patient Sign Off 2;
+Proclaim Patient Sign Off 3;
+Proclaim Patient Sign Off 4;
+Proclaim Patient Sign Off 5;
+Proclaim Patient Client Sign Off 1;
+Proclaim Patient Client Sign Off 2;
+Proclaim Patient Client Sign Off 3;
+Proclaim Patient Client Sign Off 4;
+Proclaim Patient Client Sign Off 5;
+Proclaim Debt Client Sign Off 1;
+Proclaim Debt Client Sign Off 2;
+Proclaim Debt Client Sign Off 3;
+Proclaim Debt Client Sign Off 4;
+Proclaim Debt Client Sign Off 5;
+Proclaim Debt Sign Off 1;
+Proclaim Debt Sign Off 2;
+Proclaim Debt Sign Off 3;
+Proclaim Debt Sign Off 4;
+Proclaim Debt Sign Off 5;
+Proclaim Matrimonial Client Sign Off 1;
+Proclaim Matrimonial Client Sign Off 2;
+Proclaim Matrimonial Client Sign Off 3;
+Proclaim Matrimonial Client Sign Off 4;
+Proclaim Matrimonial Client Sign Off 5;
+Proclaim Matrimonial Sign Off 1;
+Proclaim Matrimonial Sign Off 2;
+Proclaim Matrimonial Sign Off 3;
+Proclaim Matrimonial Sign Off 4;
+Proclaim Matrimonial Sign Off 5;
+Proclaim Clin Neg Sign Off 1;
+Proclaim Clin Neg Sign Off 2;
+Proclaim Clin Neg Sign Off 3;
+Proclaim Clin Neg Sign Off 4;
+Proclaim Clin Neg Sign Off 5;
+Proclaim Clin Neg Client Sign Off 1;
+Proclaim Clin Neg Client Sign Off 2;
+Proclaim Clin Neg Client Sign Off 3;
+Proclaim Clin Neg Client Sign Off 4;
+Proclaim Clin Neg Client Sign Off 5;
+Proclaim Costs Client Sign Off 1;
+Proclaim Costs Client Sign Off 2;
+Proclaim Costs Client Sign Off 3;
+Proclaim Costs Client Sign Off 4;
+Proclaim Costs Client Sign Off 5;
+Proclaim Costs Sign Off 1;
+Proclaim Costs Sign Off 2;
+Proclaim Costs Sign Off 3;
+Proclaim Costs Sign Off 4;
+Proclaim Costs Sign Off 5;
+Proclaim General Sign Off 1;
+Proclaim General Sign Off 2;
+Proclaim General Sign Off 3;
+Proclaim General Sign Off 4;
+Proclaim General Sign Off 5;
+Proclaim General Client Sign Off 1;
+Proclaim General Client Sign Off 2;
+Proclaim General Client Sign Off 3;
+Proclaim General Client Sign Off 4;
+Proclaim General Client Sign Off 5;
+Proclaim Housing Client Sign Off 1;
+Proclaim Housing Client Sign Off 2;
+Proclaim Housing Client Sign Off 3;
+Proclaim Housing Client Sign Off 4;
+Proclaim Housing Client Sign Off 5;
+Proclaim Housing Sign Off 1;
+Proclaim Housing Sign Off 2;
+Proclaim Housing Sign Off 3;
+Proclaim Housing Sign Off 4;
+Proclaim Housing Sign Off 5;
+Proclaim Financial Sign Off 1;
+Proclaim Financial Sign Off 2;
+Proclaim Financial Sign Off 3;
+Proclaim Financial Sign Off 4;
+Proclaim Financial Sign Off 5;
+Proclaim Financial Client Sign Off 1;
+Proclaim Financial Client Sign Off 2;
+Proclaim Financial Client Sign Off 3;
+Proclaim Financial Client Sign Off 4;
+Proclaim Financial Client Sign Off 5;
+Proclaim ID Client Sign Off 1;
+Proclaim ID Client Sign Off 2;
+Proclaim ID Client Sign Off 3;
+Proclaim ID Client Sign Off 4;
+Proclaim ID Client Sign Off 5;
+Proclaim ID Sign Off 1;
+Proclaim ID Sign Off 2;
+Proclaim ID Sign Off 3;
+Proclaim ID Sign Off 4;
+Proclaim ID Sign Off 5;
+Proclaim Employment Sign Off 1;
+Proclaim Employment Sign Off 2;
+Proclaim Employment Sign Off 3;
+Proclaim Employment Sign Off 4;
+Proclaim Employment Sign Off 5;
+Proclaim Employment Client Sign Off 1;
+Proclaim Employment Client Sign Off 2;
+Proclaim Employment Client Sign Off 3;
+Proclaim Employment Client Sign Off 4;
+Proclaim Employment Client Sign Off 5;
+Proclaim Repossessions Client Sign Off 1;
+Proclaim Repossessions Client Sign Off 2;
+Proclaim Repossessions Client Sign Off 3;
+Proclaim Repossessions Client Sign Off 4;
+Proclaim Repossessions Client Sign Off 5;
+Proclaim Repossessions Sign Off 1;
+Proclaim Repossessions Sign Off 2;
+Proclaim Repossessions Sign Off 3;
+Proclaim Repossessions Sign Off 4;
+Proclaim Repossessions Sign Off 5;
+Proclaim Title Style;
+Proclaim Def PI Client 1;
+Proclaim Def PI Client 2;
+Proclaim Def PI Client 3;
+Proclaim Def PI Client 4;
+Proclaim Def PI Client 5;
+Proclaim Def PI 1;
+Proclaim Def PI 2;
+Proclaim Def PI 3;
+Proclaim Def PI 4;
+Proclaim Def PI 5;
+Balloon Text;
+; Rachel Victoria Peck
+Jessica Atha
+Collision Engineers
+Our Ref:
+Your Ref:
+Date:
+JAA/MORGAN/S486439.001
+05/05/26
+URGENT VEHICLE INSPECTION REQUIRED
+Dear Sirs
+Client reg: CV68 OVM
+I act on behalf of the above named client in the recovery of damages resulting from an accident which occurred on the above date.
+The circumstances of the accident are CL stationary on the road due to traffic when the oncoming TP hit CL's vehicle and proceed down the road.
+Please arrange an inspection of my client'
+s vehicle as soon as possible and provide a report detailing the damage sustained, costs of repair or cost of replacement if beyond repair.
+The introducer is called Wilson Breakdown Recovery.
+I have advised my client of your instruction. Please make arrangements for the inspection with my client. Mr Lewis Morgan is available at:
+Lochgelly
+KY5 9NY
+I can confirm that in accordance with the C
+questions concerning my clients losses. I would be grateful if you could ensure that I receive copies of any such correspondence along with your replies.
+Finally having regard to your reasonable fees, I hereby confirm that this firm will be responsible for the same in accordance with our agreement.
+Yours sincerely
+Oakwood Scotland Solicitors Limited
+Direct Dial: 0113 218 5717
+Email: J.Atha@oakwoodsolicitors.co.uk
+Fax: 0113 200 9768

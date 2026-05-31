@@ -1,0 +1,137 @@
+{
+  "provider": {
+    "provider_id": "mp_simple",
+    "provider_name": "MP (Simple)",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "MP",
+      "raw_value": "MP",
+      "rule_id": "mp_simple_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "GF14RUC",
+      "raw_value": "GF14 RUC",
+      "rule_id": "mp_simple_vrm",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Volkswagen Sharan",
+      "raw_value": "Volkswagen Sharan",
+      "rule_id": "mp_simple_vehicle_model",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Miss Shakila Hussain",
+      "raw_value": "Miss Shakila Hussain",
+      "rule_id": "mp_simple_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 7,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "RA6458825",
+      "raw_value": "RA6458825",
+      "rule_id": "mp_simple_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 6,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "07/04/2026",
+      "raw_value": "07/04/2026",
+      "rule_id": "mp_simple_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 5,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "07/04/2026",
+      "raw_value": "07/04/2026",
+      "rule_id": "fallback_instruction_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 5,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_simple_inspection_date",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "RHS Recovery\n9-11 Bradbury Street\nDewsbury\n\n\nWF13 3AU",
+      "raw_value": "RHS Recovery\n9-11 Bradbury Street\nDewsbury\nWF13 3AU",
+      "rule_id": "fallback_address_postcode_block",
+      "confidence": 0.6,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 14,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_simple_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_simple_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_simple_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_simple_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

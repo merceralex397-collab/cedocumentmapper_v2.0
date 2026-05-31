@@ -21,6 +21,9 @@ dependencies = [
   "pywin32>=306; platform_system == 'Windows'",
 ]
 
+[project.scripts]
+cedocumentmapper = "cedocumentmapper_v2.cli:main"
+
 [project.optional-dependencies]
 dev = [
   "pytest>=8.2.0",
@@ -44,4 +47,32 @@ target-version = "py311"
 python_version = "3.11"
 strict = true
 packages = ["cedocumentmapper_v2"]
+
+[[tool.mypy.overrides]]
+module = [
+  "fitz",
+  "fitz.*",
+  "pypdf",
+  "pypdf.*",
+  "PIL",
+  "PIL.*",
+  "pytesseract",
+  "pytesseract.*",
+  "docx",
+  "docx.*",
+  "extract_msg",
+  "extract_msg.*",
+  "jsonschema",
+  "jsonschema.*",
+  "win32com",
+  "win32com.*",
+  "pythoncom",
+  "pythoncom.*",
+]
+ignore_missing_imports = true
+ignore_errors = false
+
+[[tool.mypy.overrides]]
+module = ["extract_msg", "extract_msg.*"]
+disallow_untyped_calls = false
 

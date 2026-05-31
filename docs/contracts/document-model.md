@@ -11,6 +11,8 @@ The document model is the internal representation all readers produce.
 - `reader_notes`: non-fatal reader diagnostics.
 - `metadata`: reader-specific facts such as OCR usage, page count, or attachment names.
 
+Readers should preserve both extraction-friendly lines and any raw line stream that is useful for legacy-compatible positional behavior. When blank-preserving text is available, place it in `metadata.raw_lines` as an ordered array of strings and `metadata.raw_text` as the original normalized line text.
+
 ## Line Properties
 
 Each line should include:
@@ -25,4 +27,6 @@ Each line should include:
 ## Rules
 
 Rules should prefer line and coordinate data over reparsing `plain_text` when that makes extraction safer. `plain_text` exists for provider detection and simple label searches.
+
+Line-position rules must use `metadata.raw_lines` when present, because some provider presets depend on blank-preserving source positions.
 

@@ -1,0 +1,180 @@
+{
+  "provider": {
+    "provider_id": "eva_engineers",
+    "provider_name": "EVA (Engineers)",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "EVA (Engineers)",
+      "raw_value": "",
+      "rule_id": "eva_engineers_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "BK22FSN",
+      "raw_value": "BK22FSN",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.88,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 21,
+        "bbox": [
+          50.87903594970703,
+          310.1466979980469,
+          127.60633850097656,
+          319.5066833496094
+        ]
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "MINI COOPER S EXCLUSIVE",
+      "raw_value": "MINI COOPER S EXCLUSIVE",
+      "rule_id": "fallback_vehicle_model_exact_vehicle",
+      "confidence": 0.78,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 17,
+        "bbox": [
+          52.559139251708984,
+          295.9867248535156,
+          207.52847290039062,
+          305.3467102050781
+        ]
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mrs Susan Neale",
+      "raw_value": "Mrs Susan Neale",
+      "rule_id": "fallback_claimant_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 14,
+        "bbox": [
+          36.95912551879883,
+          236.38809204101562,
+          128.2696075439453,
+          244.7948455810547
+        ]
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "00035682/NOELB",
+      "raw_value": "00035682/NOELB",
+      "rule_id": "fallback_reference_next_line",
+      "confidence": 0.76,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 3,
+        "bbox": [
+          412.5610656738281,
+          145.7465362548828,
+          485.6736145019531,
+          154.62655639648438
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "01/05/2026",
+      "raw_value": "01/05/2026",
+      "rule_id": "fallback_incident_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 50,
+        "bbox": [
+          231.83926391601562,
+          449.1067810058594,
+          315.7301330566406,
+          458.466796875
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "05/05/2026",
+      "raw_value": "05 May 2026",
+      "rule_id": "eva_engineers_instruction_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "05/05/2026",
+      "raw_value": "05/05/2026",
+      "rule_id": "eva_engineers_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "(13.07% of PAV)\nRoadworthy: Yes\nDESKTOP ASSESSMENT\nThis report has been compiled from a desktop review of the information available relating to this claim.\nNATURE OF INCIDENT The vehicle has suffered light to moderate collision/impact damage to the front.\nENGINEER'S COMMENTS",
+      "raw_value": "(13.07% of PAV)\nRoadworthy: Yes\nDESKTOP ASSESSMENT\nThis report has been compiled from a desktop review of the information available relating to this claim.\nNATURE OF INCIDENT\nThe vehicle has suffered light to moderate collision/impact damage to the front.\nENGINEER'S COMMENTS",
+      "rule_id": "fallback_inspection_address",
+      "confidence": 0.6857142857142857,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 56,
+        "bbox": [
+          219.11915588378906,
+          474.54681396484375,
+          349.3417053222656,
+          483.9068298339844
+        ]
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "eva_engineers_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "14841",
+      "raw_value": "14841",
+      "rule_id": "eva_engineers_mileage",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 19,
+        "bbox": [
+          444.47930908203125,
+          295.9867248535156,
+          508.4513244628906,
+          305.3467102050781
+        ]
+      },
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "Miles",
+      "raw_value": "Miles",
+      "rule_id": "eva_engineers_mileage_unit",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

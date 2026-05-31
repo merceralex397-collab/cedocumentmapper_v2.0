@@ -1,0 +1,14 @@
+{
+  "fixture_id": "alison_word_01",
+  "source_file": "ALISON WORD 01.docx",
+  "expected_provider": "alison",
+  "expected_values": {
+    "work_provider": "ALISON",
+    "vrm": "YH14AMK",
+    "claimant_name": "Uzair Khan",
+    "incident_date": "12/09/2025",
+    "inspection_address": "22 Blenheim Rd\nBradford\nW Yorks\n\n\nBD8 7LH"
+  },
+  "allowed_blank_fields": [],
+  "notes": "Regression fixture for ALISON Solicitors Word docx format."
+}

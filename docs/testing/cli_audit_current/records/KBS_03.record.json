@@ -1,0 +1,180 @@
+{
+  "provider": {
+    "provider_id": "kbs",
+    "provider_name": "KBS",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "KBS",
+      "raw_value": "KBS",
+      "rule_id": "kbs_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "DX18FCG",
+      "raw_value": "DX18FCG",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.675,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 15,
+        "bbox": [
+          252.0500030517578,
+          302.45001220703125,
+          296.5450134277344,
+          313.4900207519531
+        ]
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Toyota",
+      "raw_value": "Toyota",
+      "rule_id": "fallback_vehicle_model_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 10,
+        "bbox": [
+          72.02400207519531,
+          289.010009765625,
+          166.43504333496094,
+          300.0500183105469
+        ]
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mr Saeed Ahmed",
+      "raw_value": "Mr Saeed Ahmed",
+      "rule_id": "fallback_claimant_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 7,
+        "bbox": [
+          72.02400207519531,
+          275.57000732421875,
+          120.71504211425781,
+          286.6100158691406
+        ]
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "SK.506039",
+      "raw_value": "SK.506039",
+      "rule_id": "kbs_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 4,
+        "bbox": [
+          72.02400207519531,
+          195.01998901367188,
+          161.15504455566406,
+          206.0599822998047
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "27/03/2026",
+      "raw_value": "27/03/2026",
+      "rule_id": "fallback_incident_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 18,
+        "bbox": [
+          252.0500030517578,
+          315.8900146484375,
+          308.5450134277344,
+          326.9300231933594
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "05/05/2026",
+      "raw_value": "05 May 2026",
+      "rule_id": "kbs_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 5,
+        "bbox": [
+          72.02400207519531,
+          221.89999389648438,
+          132.5950469970703,
+          232.9399871826172
+        ]
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "kbs_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "mentioned below and forward to us the report in due course.\nThe vehicle is currently located at\n85 Hamilton Road\nStoke-on-Trent\n\nST3 4RP",
+      "raw_value": "mentioned below and forward to us the report in due course.\nThe vehicle is currently located at\n85 Hamilton Road, Stoke-on-Trent, ST3 4RP",
+      "rule_id": "fallback_inspection_address",
+      "confidence": 0.8,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 24,
+        "bbox": [
+          72.02400207519531,
+          437.4700012207031,
+          506.0633850097656,
+          448.510009765625
+        ]
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "the claimant was correctly\nproceeding along Lightwood Road, Stoke-on-Trent, at the crossroad to Chaplin Road on green traffic\nlights, when the defendant failed to stop at their red traffic lights and collided into the claimant's\nvehicle.",
+      "raw_value": "the claimant was correctly\nproceeding along Lightwood Road, Stoke-on-Trent, at the crossroad to Chaplin Road on green traffic\nlights, when the defendant failed to stop at their red traffic lights and collided into the claimant's\nvehicle.",
+      "rule_id": "kbs_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kbs_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kbs_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kbs_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

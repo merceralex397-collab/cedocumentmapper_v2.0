@@ -1,0 +1,145 @@
+{
+  "provider": {
+    "provider_id": "kbs",
+    "provider_name": "KBS",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "KBS",
+      "raw_value": "KBS",
+      "rule_id": "kbs_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "VX17GBU",
+      "raw_value": "VX17GBU",
+      "rule_id": "kbs_vrm",
+      "confidence": 0.96,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 10,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Toyota",
+      "raw_value": "Toyota",
+      "rule_id": "kbs_vehicle_model",
+      "confidence": 0.975609756097561,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 9,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mr Muzamal Hussain",
+      "raw_value": "Mr Muzamal Hussain",
+      "rule_id": "kbs_claimant_name",
+      "confidence": 0.8461538461538461,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 8,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "-.303671",
+      "raw_value": "-.303671",
+      "rule_id": "kbs_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 4,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "02/05/2026",
+      "raw_value": "02/05/2026",
+      "rule_id": "kbs_incident_date",
+      "confidence": 0.9696969696969697,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 11,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "06/05/2026",
+      "raw_value": "06 May 2026",
+      "rule_id": "kbs_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 5,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "kbs_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "(38 Highfield Avenue Stoke-on-Trent ST3 5LZ)\n\n\n\n\n",
+      "raw_value": "(38 Highfield Avenue Stoke-on-Trent ST3 5LZ)",
+      "rule_id": "kbs_inspection_address",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 14,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "The claimant was stationary in a line of traffic on Bucknall New Road, approaching the traffic lights, when third party vehicle collided with the rear of the claimant’s vehicle, causing the accident..",
+      "raw_value": "The claimant was stationary in a line of traffic on Bucknall New Road, approaching the traffic lights, when third party vehicle collided with the rear of the claimant’s vehicle, causing the accident..",
+      "rule_id": "kbs_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kbs_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kbs_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "kbs_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

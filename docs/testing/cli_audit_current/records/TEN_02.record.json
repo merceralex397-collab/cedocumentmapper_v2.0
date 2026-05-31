@@ -1,0 +1,141 @@
+{
+  "provider": {
+    "provider_id": "ten",
+    "provider_name": "TEN",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "TEN",
+      "raw_value": "TEN",
+      "rule_id": "ten_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "PN18VKC",
+      "raw_value": "PN18 VKC",
+      "rule_id": "ten_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 10,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "of the above named client and would be grateful if you would kindly arrange to inspect our client's vehicle and thereafter forward a copy of the report to ourselves in duplicate.",
+      "raw_value": "of the above named client and would be grateful if you would kindly arrange to inspect our client's vehicle and thereafter forward a copy of the report to ourselves in duplicate.",
+      "rule_id": "fallback_vehicle_model_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 20,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Miss Kayleigh Booth",
+      "raw_value": "Miss Kayleigh Booth",
+      "rule_id": "ten_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 0,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "JM.8385.PI",
+      "raw_value": "JM.8385.PI",
+      "rule_id": "ten_reference",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "incident_date": {
+      "value": "17/04/2026",
+      "raw_value": "17/04/2026",
+      "rule_id": "ten_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 12,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "30/04/2026",
+      "raw_value": "30/04/2026",
+      "rule_id": "ten_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 3,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "ten_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "Should you have any queries\nplease do not hesitate to contact us.\nWe await your report.\nKind Regards\nSamia Arif sa@tenlegal.co.uk Confidentiality This email and any attachments are strictly confidential and intended solely for the addressees. If you are not the intended addressee you must not copy the contents of this email or any attachments\nor disclose the contents to any other person. If you have",
+      "raw_value": "Should you have any queries, please do not hesitate to contact us.\nWe await your report.\nKind Regards\nSamia Arif\nsa@tenlegal.co.uk\nConfidentiality\nThis email and any attachments are strictly confidential and intended solely for the addressees. If you are not the intended addressee, you must not copy the contents of this email or any attachments, or disclose the contents to any other person. If you have",
+      "rule_id": "fallback_inspection_address",
+      "confidence": 0.65,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 24,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "ten_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "ten_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "ten_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "ten_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

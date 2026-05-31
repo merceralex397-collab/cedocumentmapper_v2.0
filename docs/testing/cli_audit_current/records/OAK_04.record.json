@@ -1,0 +1,152 @@
+{
+  "provider": {
+    "provider_id": "oak",
+    "provider_name": "OAK",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "OAK",
+      "raw_value": "OAK",
+      "rule_id": "oak_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "SG12BLS",
+      "raw_value": "SG12 BLS",
+      "rule_id": "oak_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 184,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "TOYOTA YARIS VVT-I SR",
+      "raw_value": "TOYOTA YARIS VVT-I SR",
+      "rule_id": "oak_vehicle_model",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 185,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mr Mohammad Butt",
+      "raw_value": "Mr Mohammad Butt",
+      "rule_id": "fallback_claimant_available",
+      "confidence": 0.74,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 193,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "GHE/BUTT/S486424.001",
+      "raw_value": "GHE/BUTT/S486424.001",
+      "rule_id": "fallback_reference",
+      "confidence": 0.85,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 176,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "oak_incident_date",
+      "confidence": null,
+      "source_span": null,
+      "issues": [
+        {
+          "field": "incident_date",
+          "severity": "error",
+          "code": "missing_required_field",
+          "message": "Required field 'incident_date' is empty."
+        }
+      ]
+    },
+    "instruction_date": {
+      "value": "05/05/2026",
+      "raw_value": "05/05/26",
+      "rule_id": "oak_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 181,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "oak_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "Glasgow\n\n\n\n\nG53 7BB",
+      "raw_value": "Glasgow\nG53 7BB",
+      "rule_id": "fallback_address_postcode_block",
+      "confidence": 0.6,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 195,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "that our client was proceeding correctly through a green light at a cross road when the",
+      "raw_value": "that our client was proceeding correctly through a green light at a cross road when the",
+      "rule_id": "oak_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 187,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "oak_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "oak_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "oak_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

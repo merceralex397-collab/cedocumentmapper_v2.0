@@ -1,0 +1,180 @@
+{
+  "provider": {
+    "provider_id": "hduk",
+    "provider_name": "HDUK",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "YML",
+      "raw_value": "YML",
+      "rule_id": "hduk_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "RV61VBC",
+      "raw_value": "RV61 VBC",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.675,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 22,
+        "bbox": [
+          252.0500030517578,
+          355.489990234375,
+          299.4250183105469,
+          366.5299987792969
+        ]
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "BMW320",
+      "raw_value": "BMW320",
+      "rule_id": "fallback_vehicle_model_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 17,
+        "bbox": [
+          72.02400207519531,
+          342.04998779296875,
+          166.43504333496094,
+          353.0899963378906
+        ]
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Stacey Lewis",
+      "raw_value": "Stacey Lewis",
+      "rule_id": "fallback_claimant_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 14,
+        "bbox": [
+          72.02400207519531,
+          328.6099853515625,
+          120.71504211425781,
+          339.6499938964844
+        ]
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "HD4010",
+      "raw_value": "HD4010",
+      "rule_id": "fallback_reference_next_line",
+      "confidence": 0.76,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 10,
+        "bbox": [
+          144.02000427246094,
+          221.17996215820312,
+          184.9150390625,
+          232.21995544433594
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "03/05/2026",
+      "raw_value": "03/05/2026",
+      "rule_id": "fallback_incident_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 25,
+        "bbox": [
+          252.0500030517578,
+          368.92999267578125,
+          308.5450134277344,
+          379.9700012207031
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "05/05/2026",
+      "raw_value": "05 May 2026",
+      "rule_id": "hduk_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 11,
+        "bbox": [
+          72.02400207519531,
+          248.05996704101562,
+          132.5950469970703,
+          259.0999755859375
+        ]
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "hduk_inspection_date",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "6 Nant-Y-Gaer\nLlay Wrexham\n\n\n\nLL12 OSG",
+      "raw_value": "6 Nant-Y-Gaer, Llay Wrexham, LL12 OSG",
+      "rule_id": "hduk_inspection_address",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 32,
+        "bbox": [
+          72.02400207519531,
+          519.3099365234375,
+          409.6050109863281,
+          530.3499755859375
+        ]
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "The Claimant's Vehicle was parked\nand Stationary in the Car Park, When the Defendant's Vehicle pulled out into space and collided into\nthe claimant's Vehicle. As a result of the collision we request that you inspect our Client's vehicle at\nthe address mentioned below and forward to us the report in due course.",
+      "raw_value": "The Claimant's Vehicle was parked\nand Stationary in the Car Park, When the Defendant's Vehicle pulled out into space and collided into\nthe claimant's Vehicle. As a result of the collision we request that you inspect our Client's vehicle at\nthe address mentioned below and forward to us the report in due course.",
+      "rule_id": "hduk_accident_circumstances",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "hduk_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "hduk_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "hduk_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

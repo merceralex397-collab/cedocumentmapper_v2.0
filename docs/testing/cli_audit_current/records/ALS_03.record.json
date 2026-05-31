@@ -1,0 +1,141 @@
+{
+  "provider": {
+    "provider_id": "als",
+    "provider_name": "ALS",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "ALS",
+      "raw_value": "ALS",
+      "rule_id": "als_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "EF15AOS",
+      "raw_value": "EF15AOS",
+      "rule_id": "als_vrm",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 25,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "Fiesta Titanium X Tdci",
+      "raw_value": "Fiesta Titanium X Tdci",
+      "rule_id": "als_vehicle_model",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 29,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mrs Lisa Bell",
+      "raw_value": "Mrs Lisa Bell",
+      "rule_id": "als_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 15,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "159133",
+      "raw_value": "159133",
+      "rule_id": "als_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 6,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "20/04/2026",
+      "raw_value": "20/04/2026",
+      "rule_id": "als_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 12,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "30/04/2026",
+      "raw_value": "30th April 2026",
+      "rule_id": "als_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 0,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "31/05/2026",
+      "raw_value": "",
+      "rule_id": "als_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "Image-based Assessment\n\n\n\n\n",
+      "raw_value": "Image-based Assessment",
+      "rule_id": "als_inspection_address",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "als_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "als_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "Km",
+      "raw_value": "Km",
+      "rule_id": "fallback_mileage_unit",
+      "confidence": 0.6,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

@@ -1,0 +1,180 @@
+{
+  "provider": {
+    "provider_id": "eva_engineers",
+    "provider_name": "EVA (Engineers)",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "EVA (Engineers)",
+      "raw_value": "",
+      "rule_id": "eva_engineers_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "KY69KFV",
+      "raw_value": "KY69KFV",
+      "rule_id": "fallback_vrm_label",
+      "confidence": 0.88,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 23,
+        "bbox": [
+          59.5190544128418,
+          310.147705078125,
+          135.5222930908203,
+          319.5077209472656
+        ]
+      },
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "SKODA FABIA COLOUR EDITION TSI",
+      "raw_value": "SKODA FABIA COLOUR EDITION TSI",
+      "rule_id": "fallback_vehicle_model_exact_vehicle",
+      "confidence": 0.78,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 19,
+        "bbox": [
+          60.95914077758789,
+          295.98773193359375,
+          252.79391479492188,
+          305.34771728515625
+        ]
+      },
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Mr Ben Peppiatt",
+      "raw_value": "Mr Ben Peppiatt",
+      "rule_id": "fallback_claimant_structured",
+      "confidence": 0.86,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 15,
+        "bbox": [
+          45.359134674072266,
+          236.38912963867188,
+          133.5963897705078,
+          244.79588317871094
+        ]
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "00033800/MATTG",
+      "raw_value": "00033800/MATTG",
+      "rule_id": "fallback_reference_next_line",
+      "confidence": 0.76,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 4,
+        "bbox": [
+          420.9610290527344,
+          145.74757385253906,
+          495.06341552734375,
+          154.62759399414062
+        ]
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "02/04/2026",
+      "raw_value": "02/04/2026",
+      "rule_id": "fallback_incident_date_context",
+      "confidence": 0.7,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 52,
+        "bbox": [
+          240.23927307128906,
+          449.1078186035156,
+          324.3701477050781,
+          458.46783447265625
+        ]
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "07/04/2026",
+      "raw_value": "07 April 2026",
+      "rule_id": "eva_engineers_instruction_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "08/04/2026",
+      "raw_value": "08/04/2026",
+      "rule_id": "eva_engineers_inspection_date",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "to sharp edges\nbroken headlight. We understand that the vehicle is not currently being used by the owner.\nIn preparing this report I confirm that I understand my overriding duty to the court and confirm I have complied with\nthat duty. I confirm that I have made clear which facts and matters referred to in this report are within my own\nknowledge and which are not. Those that are within my own knowledge I confirm to be true. The opinions I have expressed represent my true and complete professional opinions on the matters to which they refer. This report relates to damage sustained by the above vehicle in an RTC. QDOS Assistance commissioned this report\nin writing on behalf of the client.",
+      "raw_value": "to sharp edges, broken headlight. We understand that the vehicle is not currently being used by the owner.\nIn preparing this report I confirm that I understand my overriding duty to the court and confirm I have complied with\nthat duty. I confirm that I have made clear which facts and matters referred to in this report are within my own\nknowledge and which are not. Those that are within my own knowledge I confirm to be true. The opinions I have\nexpressed represent my true and complete professional opinions on the matters to which they refer.\nThis report relates to damage sustained by the above vehicle in an RTC. QDOS Assistance commissioned this report\nin writing on behalf of the client.",
+      "rule_id": "fallback_inspection_address",
+      "confidence": 0.6709677419354839,
+      "source_span": {
+        "page_index": 1,
+        "line_index": 43,
+        "bbox": [
+          45.359134674072266,
+          566.2911987304688,
+          559.8418579101562,
+          576.3712158203125
+        ]
+      },
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "eva_engineers_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "Yes",
+      "raw_value": "Yes",
+      "rule_id": "fallback_vat_positive",
+      "confidence": 0.55,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "54131",
+      "raw_value": "54131",
+      "rule_id": "eva_engineers_mileage",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 21,
+        "bbox": [
+          452.87933349609375,
+          295.9877014160156,
+          517.0912475585938,
+          305.34771728515625
+        ]
+      },
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "Miles",
+      "raw_value": "Miles",
+      "rule_id": "eva_engineers_mileage_unit",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}

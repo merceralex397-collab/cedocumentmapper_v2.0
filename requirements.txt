@@ -8,4 +8,5 @@ tkinterdnd2>=0.4.2
 pydantic>=2.7.0
 jsonschema>=4.22.0
 pywin32>=306; platform_system=="Windows"
+pywebview>=5.1
 

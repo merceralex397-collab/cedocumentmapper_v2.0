@@ -1,0 +1,137 @@
+{
+  "provider": {
+    "provider_id": "mp_branded",
+    "provider_name": "MP (Branded)",
+    "confidence": 1.0,
+    "matched_terms": [],
+    "missing_terms": [],
+    "rejected_terms": []
+  },
+  "fields": {
+    "work_provider": {
+      "value": "MP",
+      "raw_value": "MP",
+      "rule_id": "mp_branded_work_provider",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vrm": {
+      "value": "WA55KYK",
+      "raw_value": "WA55 KYK",
+      "rule_id": "mp_branded_vrm",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "vehicle_model": {
+      "value": "BMW I4",
+      "raw_value": "BMW I4",
+      "rule_id": "mp_branded_vehicle_model",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "claimant_name": {
+      "value": "Miss Waseema Kola",
+      "raw_value": "Miss Waseema Kola",
+      "rule_id": "mp_branded_claimant_name",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 7,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "reference": {
+      "value": "RA6458668",
+      "raw_value": "RA6458668",
+      "rule_id": "mp_branded_reference",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 6,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "incident_date": {
+      "value": "22/09/2025",
+      "raw_value": "22/09/2025",
+      "rule_id": "mp_branded_incident_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 5,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "instruction_date": {
+      "value": "07/04/2026",
+      "raw_value": "07/042026",
+      "rule_id": "mp_branded_instruction_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 1,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_date": {
+      "value": "08/04/2026",
+      "raw_value": "08/04/2026",
+      "rule_id": "mp_branded_inspection_date",
+      "confidence": 1.0,
+      "source_span": {
+        "page_index": 0,
+        "line_index": 3,
+        "bbox": null
+      },
+      "issues": []
+    },
+    "inspection_address": {
+      "value": "Rose Hill Works\nNelson Street\nBolton\n\n\nBL3 2RW",
+      "raw_value": "Rose Hill Works\nNelson Street\nBolton\nBL3 2RW",
+      "rule_id": "mp_branded_inspection_address",
+      "confidence": 1.0,
+      "source_span": null,
+      "issues": []
+    },
+    "accident_circumstances": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_branded_accident_circumstances",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "vat_status": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_branded_vat_status",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_branded_mileage",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    },
+    "mileage_unit": {
+      "value": "",
+      "raw_value": "",
+      "rule_id": "mp_branded_mileage_unit",
+      "confidence": null,
+      "source_span": null,
+      "issues": []
+    }
+  },
+  "issues": []
+}
